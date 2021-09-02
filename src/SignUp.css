@@ -1,0 +1,48 @@
+.SignUp {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+  }
+
+  .SignUp-header{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+  }
+
+  .SignUp-header h2{
+    margin-top: 0px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+  .SignUp-header h4{
+    font-size: 14px;
+    font-weight: lighter;
+    margin-bottom: 0%;
+    text-align: left;
+    color: #616161;
+  }
+
+  .SignUp-header a{
+    color: #1da0f2;
+    text-decoration: none;
+  }
+
+  .SignUp-header button{
+    width: 200px;
+    height: 40px;
+    font-weight: bold;  
+    color: #ffffff;
+    background: #1DA1F2;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
