@@ -4,11 +4,13 @@ import './index.css';
 import Home from './Home';
 import Login from './Login';
 import SignUp from './SignUp';
+import ForgetPW from './ForgetPW';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <SignUp   />
+    <ForgetPW
+       />
   </React.StrictMode>,
   document.getElementById('root')
 );

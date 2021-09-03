@@ -1,8 +1,8 @@
-import './SignUp.css';
+import './Login';
 function SignUp() {
     return (
-        <div className="SignUp">
-            <header className="SignUp-header"> 
+        <div className="Login">
+            <header className="Login-header"> 
             <h4>My Twitter
             <h2>Create your account</h2>
             Name<br/>

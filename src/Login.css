@@ -1,4 +1,4 @@
-.Login {
+  .Login {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -15,6 +15,7 @@
   }
 
   .Login-header h2{
+    margin-top: 0px;
     font-size: 24px;
     font-weight: bold;
     color: black;
@@ -42,4 +43,6 @@
     box-sizing: border-box;
     border-radius: 5px;
     border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
