@@ -1,4 +1,4 @@
-import './Login.css';
+import '../../../styles/login.css';
 function Login() {
     return (
         <div className="Login">

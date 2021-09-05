@@ -1,5 +1,5 @@
-import './Login.css';
-function ForgetPW() {
+import '../../../styles/login.css';
+function ForgetPw() {
     return (
         <div className="Login">
          <header className="Login-header">   
@@ -15,4 +15,4 @@ function ForgetPW() {
         </div>
     );
 }
-export default ForgetPW;
+export default ForgetPw;

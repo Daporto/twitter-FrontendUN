@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Home from './Home';
-import Login from './Login';
-import SignUp from './SignUp';
-import ForgetPW from './ForgetPW';
-import reportWebVitals from './reportWebVitals';
+import './styles/index.css';
+import Home from './components/Public/Home/Home';
+import Login from './components/Public/Login/Login';
+import SignUp from './components/Public/SignUp/SignUp';
+import ForgetPw from './components/Public/ForgetPw/ForgetPw';
+import reportWebVitals from './components/Public/ReportWebVitals/reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ForgetPW
+    <Login
        />
   </React.StrictMode>,
   document.getElementById('root')
