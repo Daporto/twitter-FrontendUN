@@ -1,4 +1,4 @@
-import './Login';
+import '../Login/Login';
 function SignUp() {
     return (
         <div className="Login">
