@@ -9,7 +9,11 @@ const App = () => {
         <Switch>
           {
             unrestricted.map(({ path, component }) =>
-              <Route exact path={path} component={component} />)
+              <Route exact path={path} component={component} />)        
+          }
+          {
+            restricted.map(({ path, component }) =>
+            <Route exact path={path} component={component} />)
           }
         </Switch>
       </BrowserRouter>
