@@ -17,8 +17,8 @@ function Feed() {
     return (
         <div className="container-total">
         <div className="navigation">
-            <img src={Logo} width="50" height="50"/>
-            <div><img src={HLogo} width="30" height="30"/><h2>Home</h2></div>
+            <img  src={Logo} width="50" height="50"/>
+            <div ><img  src={HLogo} width="30" height="30"/><h2><h>Home</h></h2></div>
             <div><img src={ELogo} width="30" height="30"/><h2>Explore</h2></div>
             <div><img src={NLogo} width="30" height="30"/><h2>Notifications</h2></div>
             <div><img src={MLogo} width="30" height="30"/><h2>Messages</h2></div>
@@ -45,12 +45,106 @@ function Feed() {
                     <img src={Like} width="30" height="30"/>
                     <img src={Upload} width="30" height="30"/>
                 </div>
+            </div>
+           <div className="Feed-container">
+               <div className="User">
+                <img src={PLogo} width="30" height="30"/>
+               <h3>User</h3><h4>@user</h4>
+               </div>
+               <h4> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                   dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                    id est laborum.</h4>
+               <div className="links">
+                    <img src={Comment} width="30" height="30"/>
+                    <img src={Retweet} width="30" height="30"/>
+                    <img src={Like} width="30" height="30"/>
+                    <img src={Upload} width="30" height="30"/>
+                </div>
+                </div>
+           <div className="Feed-container">
+               <div className="User">
+                <img src={PLogo} width="30" height="30"/>
+               <h3>User</h3><h4>@user</h4>
+               </div>
+               <h4> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                   dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                    id est laborum.</h4>
+               <div className="links">
+                    <img src={Comment} width="30" height="30"/>
+                    <img src={Retweet} width="30" height="30"/>
+                    <img src={Like} width="30" height="30"/>
+                    <img src={Upload} width="30" height="30"/>
+                </div>
+                </div>
+           <div className="Feed-container">
+               <div className="User">
+                <img src={PLogo} width="30" height="30"/>
+               <h3>User</h3><h4>@user</h4>
+               </div>
+               <h4> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                   dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                    id est laborum.</h4>
+               <div className="links">
+                    <img src={Comment} width="30" height="30"/>
+                    <img src={Retweet} width="30" height="30"/>
+                    <img src={Like} width="30" height="30"/>
+                    <img src={Upload} width="30" height="30"/>
+                </div>
+                </div>
+           <div className="Feed-container">
+               <div className="User">
+                <img src={PLogo} width="30" height="30"/>
+               <h3>User</h3><h4>@user</h4>
+               </div>
+               <h4> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                   dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                    id est laborum.</h4>
+               <div className="links">
+                    <img src={Comment} width="30" height="30"/>
+                    <img src={Retweet} width="30" height="30"/>
+                    <img src={Like} width="30" height="30"/>
+                    <img src={Upload} width="30" height="30"/>
+                </div>
+                
            </div>
         </div>
         <div className="Trending">
            <div className="search"><input></input></div>
            <div className="trends">
                <div>
+                   <div><h3>Colombian Trends</h3></div>
+                   <div><h4>1.Trending
+                   <h3>#UniversidadDelNorte</h3>
+                   465k tweets</h4>
+                   </div>
+                   <div><h4>2.Trending
+                   <h3>#FacultadDeIngenierias</h3>
+                   465k tweets</h4>
+                   </div>
+                   <div><h4>3.Trending
+                   <h3>#IngenieriaDeSistemas</h3>
+                   465k tweets</h4>
+                   </div>
+                   <div><h4>4.Trending
+                   <h3>#DepartamentoDeSistemas</h3>
+                   465k tweets</h4>
+                   </div>
+                   <div><h4>5.Trending
+                   <h3>#EstudiantesDeIngenieriaDeSistemasUN</h3>
+                   465k tweets</h4>
+                   </div>
                </div>
            </div>
            <div></div>
