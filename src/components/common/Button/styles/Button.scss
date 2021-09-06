@@ -2,13 +2,14 @@
 @import 'src/variables.scss';
 
 .primary-button {
-    @include button(100%, 40px, $primary-color, #FFFFFF);
+    @include button(40vh, 40px, $primary-color, #FFFFFF);
     box-sizing: border-box;
     border-radius: 5px;
     border: none;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 100%
+    align-content: center;
+    margin-left: 80px;
 }
 
 .white-button {
@@ -16,4 +17,6 @@
     border: 1px solid $primary-color;
     box-sizing: border-box;
     border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
