@@ -1,0 +1,21 @@
+.container {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    width: 20%;
+    height: 50%;
+}
+
+.container-total {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .div-form {
+    display: flex;
+    flex-direction: column;
+    align-items:initial;
+    justify-content: left;
+    font-size: calc(10px + 2vmin);
+    color: black;
+} */

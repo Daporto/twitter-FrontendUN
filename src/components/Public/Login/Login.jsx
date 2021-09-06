@@ -2,11 +2,13 @@ import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
 import Button from '../../common/Button/Button'
 import FormHeader from '../../common/FormHeader/FormHeader'
+import './styles/index.scss'
 
 function Login() {
     return (
-        <div className="Form">
-         <header className="Form-header">   
+        <div className="container-total">
+        <div className="container">
+            <div className="div-form">
             <FormHeader
                 title="Login to your account"
                 subtitle="My Twitter"
@@ -32,8 +34,9 @@ function Login() {
                     text="Login now"
                 />
             </Form>
+            </div> 
             <h4 className="secondary-text">Don't have an account? <a href="">Join free today</a></h4>
-            </header>
+        </div>
         </div>
     );
 }
