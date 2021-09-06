@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.css';
-import Home from './components/Public/Home/Home';
-import Login from './components/Public/Login/Login';
-import SignUp from './components/Public/SignUp/SignUp';
-import ForgetPw from './components/Public/ForgetPw/ForgetPw';
-import reportWebVitals from './components/Public/ReportWebVitals/reportWebVitals';
+import './index.scss';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Login
-       />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
