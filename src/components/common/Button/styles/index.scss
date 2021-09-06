@@ -1,0 +1,19 @@
+@import "mixins";
+@import 'src/variables.scss';
+
+.primary-button {
+    @include button(100%, 40px, $primary-color, #FFFFFF);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%
+}
+
+.white-button {
+    @include button(100%, 40px, #FFFFFF, $primary-color);
+    border: 1px solid $primary-color;
+    box-sizing: border-box;
+    border-radius: 5px;
+}

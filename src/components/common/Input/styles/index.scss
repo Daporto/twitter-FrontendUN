@@ -1,0 +1,25 @@
+@import 'mixins';
+
+a {
+    @include a;
+  }
+
+.label-form {
+    color: #4A5568;
+}
+
+input {
+    @include input(100%, 50px);
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.div-input {
+    text-align: left;
+}
+
+.form-element {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

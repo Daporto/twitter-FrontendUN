@@ -1,0 +1,34 @@
+@mixin a {
+    color: #1da0f2;
+    text-decoration: none;
+}
+
+@mixin h {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: lighter;
+}
+
+@mixin h1 {
+    @include h;
+    font-size: 32px;
+    line-height: 37px;
+}
+
+@mixin h2 {
+    @include h;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+@mixin h3 {
+    @include h;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+@mixin h4 {
+    @include h;
+    font-size: 16px;
+    line-height: 19px;
+}

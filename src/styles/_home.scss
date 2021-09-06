@@ -16,7 +16,7 @@
 }
 
 .Home-header {
-  background: linear-gradient(90deg, #1DA1F2 50%, #ffffff 50%);
+  background: linear-gradient(90deg, $primary-color 50%, #ffffff 50%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,39 +26,37 @@
   color: black;
 }
 
-.Home-content-left{
+.Home-content-left {
   margin-right: 50%;
 }
-.Home-content-right{
+
+.Home-content-right {
   margin-left: 50%;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-size: 16px;
+
+  h2 {
+    @include h2;
+  }
+
+  a {
+    @include a;
+  }
+
+  h4 {
+    @include h4;
+    margin-bottom: 0%;
+  }
+
+  button {
+    @include buttons(200px,40px,$primary-color, #FFFFFF);
+    border: 1px solid $primary-color;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
 }
-.Home-content-right h2{
-  font-size: 36px;
-  font-weight: bold;
-}
-.Home-content-right a{
-  color: #1da0f2;
-  text-decoration: none;
-}
-.Home-content-right h4{
-  font-size: 14px;
-  font-weight: lighter;
-  margin-bottom: 0%;
-  color: #616161;
-}
-.Home-content-right button{
-  width: 200px;
-  height: 40px;
-  font-weight: bold;  
-  color: #1DA1F2;
-  background: #FFFFFF;
-  border: 1px solid #1DA1F2;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
+
 .App-link {
   color: #61dafb;
 }
@@ -67,6 +65,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
