@@ -1,4 +1,4 @@
-import './styles/index.scss'
+import './styles/Input.scss'
 
 const Input = (props) => {
     const { type, id, name, value, ...rest } = props;

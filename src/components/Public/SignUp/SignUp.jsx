@@ -2,10 +2,12 @@ import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
 import Button from '../../common/Button/Button'
 import FormHeader from '../../common/FormHeader/FormHeader'
+import './Styles/SignUp.scss'
 
 function SignUp() {
     return (
-        <div>
+        <div className="container-total">
+        <div className="container">
             <FormHeader
                 title="Create your account"
                 subtitle="My Twitter"
@@ -51,7 +53,8 @@ function SignUp() {
                     text="SignUp"
                 />
             </Form>
-            Already have an account? <a href="">Login</a>
+            Already have an account? <a href="./Login">Login</a>
+        </div>
         </div>
     );
 }

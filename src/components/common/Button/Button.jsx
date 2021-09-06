@@ -1,4 +1,4 @@
-import './styles/index.scss';
+import './styles/Button.scss';
 
 const Button = (props) => {
     const { className, text, ...rest } = props;

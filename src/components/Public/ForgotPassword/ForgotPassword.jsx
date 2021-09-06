@@ -2,10 +2,11 @@ import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
 import Button from '../../common/Button/Button'
 import FormHeader from '../../common/FormHeader/FormHeader'
+import './styles/ForgotPassword.scss'
 
 function ForgetPw() {
     return (
-        <div>
+        <div className="FP">
             <FormHeader
                 title="Recover your password"
                 subtitle="My Twitter"
@@ -23,7 +24,7 @@ function ForgetPw() {
                     text="Recover your password"
                 />
             </Form>           
-            Return to <a href="">Login</a>
+            <div className="text"><h4 className="secondary-text">Return to <a href="../Login">Login</a></h4></div>
         </div>
     );
 }
