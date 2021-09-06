@@ -17,15 +17,15 @@ function Home() {
             Welcome to twitter.
           </h1>
 
-          <Button
+          <a href="./LogIn"><Button
             className="white-button"
             text="Login now"
-          />
+          /></a>
           <h4 className="secondary-color">Don't have an account? <a href="./SignUp">Join free today</a></h4>
-          <Button
+          <a href="./SignUp"><Button
             className="white-button"
             text="Sign Up"
-          />
+          /></a>
         </div>
       </header>
     </div>
