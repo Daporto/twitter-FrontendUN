@@ -3,6 +3,7 @@ import Login from '../components/Public/Login/Login';
 import SignUp from '../components/Public/SignUp/SignUp';
 import Home from '../components/Public/Home/Home';
 import ForgotPassword from '../components/Public/ForgotPassword/ForgotPassword';
+import Feed from '../components/Public/Feed/Feed';
 
 const routes = {
     unrestricted: [
@@ -25,6 +26,11 @@ const routes = {
             title: "Forgot Password",
             path: "/forgotpassword",
             component: ForgotPassword,
+        },
+        {
+            title: "Feed",
+            path: "/feed",
+            component: Feed,
         }
     ]
 }
