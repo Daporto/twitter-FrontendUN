@@ -1,14 +1,15 @@
 import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
 import Button from '../../common/Button/Button'
+import FormHeader from '../../common/FormHeader/FormHeader'
 
 function SignUp() {
     return (
         <div>
-            <header className="Form-header">
-                <h4>My Twitter</h4>
-                <h2>Create your account</h2>
-            </header>
+            <FormHeader
+                title="Create your account"
+                subtitle="My Twitter"
+            />
             <Form>
                 <Input
                     type="text"

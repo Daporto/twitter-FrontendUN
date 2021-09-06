@@ -1,14 +1,15 @@
 import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
 import Button from '../../common/Button/Button'
+import FormHeader from '../../common/FormHeader/FormHeader'
 
 function ForgetPw() {
     return (
         <div>
-            <header className="Form-header">
-                <h4>My Twitter</h4>
-                <h2>Recover your password</h2>
-            </header>
+            <FormHeader
+                title="Recover your password"
+                subtitle="My Twitter"
+            />
             <Form>
                 <Input
                     type="text"

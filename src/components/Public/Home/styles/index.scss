@@ -32,6 +32,10 @@
   margin-right: 50%;
 }
 
+.secondary-color{
+    color: $secodary-text-color;
+}
+
 .Home-content-right {
   margin-left: 50%;
   font-family: 'Roboto', sans-serif;
@@ -48,9 +52,8 @@
 
   h4 {
     @include h4;
-    margin-bottom: 0%;
+    margin-bottom: 0%; 
   }
-
 }
 
 .App-link {

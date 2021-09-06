@@ -1,15 +1,16 @@
 import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
 import Button from '../../common/Button/Button'
+import FormHeader from '../../common/FormHeader/FormHeader'
 
 function Login() {
     return (
         <div className="Form">
          <header className="Form-header">   
-            <h4>My Twitter</h4>
-            <h2>Login to your account</h2>
-            </header>
-
+            <FormHeader
+                title="Login to your account"
+                subtitle="My Twitter"
+            />
             <Form>
                 <Input
                     type="text"
@@ -31,7 +32,8 @@ function Login() {
                     text="Login now"
                 />
             </Form>
-            Don't have an account? <a href="">Join free today</a>
+            <h4 className="secondary-text">Don't have an account? <a href="">Join free today</a></h4>
+            </header>
         </div>
     );
 }

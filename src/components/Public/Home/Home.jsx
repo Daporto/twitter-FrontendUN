@@ -20,7 +20,7 @@ function Home() {
             className="white-button"
             text="Login now"
           />
-          <h4>Don't have an account? <a href="">Join free today</a></h4>
+          <h4 className="secondary-color">Don't have an account? <a href="">Join free today</a></h4>
           <Button
             className="white-button"
             text="Sign Up"

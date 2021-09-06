@@ -1,3 +1,16 @@
+@import 'mixins';
+
+a {
+    @include a;
+  }
+
 .label-form {
     color: #4A5568;
+}
+
+input {
+    @include input(350px, 50px);
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    border-radius: 5px;
 }

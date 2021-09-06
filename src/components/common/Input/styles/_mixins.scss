@@ -1,0 +1,9 @@
+@mixin input($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin a {
+    color: #1da0f2;
+    text-decoration: none;
+}
