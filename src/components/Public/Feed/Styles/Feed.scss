@@ -3,6 +3,7 @@
     font-style: normal;
     width: 20%;
     height: 50%;
+    margin-right: 30px;
 }
 
 .container-total {
@@ -12,6 +13,9 @@
     align-items: center;
     position: relative;   
 }
+.navigation{
+    margin-right: 30px;
+}
 .navigation div{
     flex-direction: row;
     align-items: center;
@@ -19,4 +23,26 @@
 }
 .navigation div img{
     padding-right: 20px;
+}
+.Feed-container{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    width: 60vh;
+    height: 50%;
+}
+.Feed-container div{
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+}
+.Feed-container h4{
+    font-weight: normal;
+}
+.User h3,h4{
+    padding-left: 10px;
+}
+.links img{
+    padding-left: 40px;
+    padding-right: 40px;
+    
 }
