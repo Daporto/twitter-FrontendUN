@@ -12,23 +12,58 @@ import Comment from '../../../Images/Feed/post/comment.svg'
 import Retweet from '../../../Images/Feed/post/refreshing.svg'
 import Like from '../../../Images/Feed/post/heart.svg'
 import Upload from '../../../Images/Feed/post/upload.svg'
+import image from  '../../../Images/Feed/tweets/insert-image.svg'
+import gif from  '../../../Images/Feed/tweets/insert-gif.svg'
+import stats from  '../../../Images/Feed/tweets/insert-stats.svg'
+import emoji from  '../../../Images/Feed/tweets/insert-emoji.svg'
+import wordsc from  '../../../Images/Feed/tweets/right-words.svg'
+import line from  '../../../Images/Feed/tweets/right-line.svg'
+import plus from  '../../../Images/Feed/tweets/right-plus.svg'
+import Button from '../../common/Button/Button'
+
 
 function Feed() {
     return (
         <div className="container-total">
         <div className="navigation">
             <img  src={Logo} width="50" height="50"/>
-            <div ><img  src={HLogo} width="30" height="30"/><h2><h>Home</h></h2></div>
-            <div><img src={ELogo} width="30" height="30"/><h2>Explore</h2></div>
-            <div><img src={NLogo} width="30" height="30"/><h2>Notifications</h2></div>
-            <div><img src={MLogo} width="30" height="30"/><h2>Messages</h2></div>
-            <div><img src={BLogo} width="30" height="30"/><h2>Bookmarks</h2></div>
-            <div><img src={LLogo} width="30" height="30"/><h2>List</h2></div>
-            <div><img src={PLogo} width="30" height="30"/><h2>Profile</h2></div>
-            <div><img src={MoreLogo} width="30" height="30"/><h2>More</h2></div>
+            <div ><img  src={HLogo} width="30" height="30"/><h3><h>Home</h></h3></div>
+            <div><img src={ELogo} width="30" height="30"/><h3>Explore</h3></div>
+            <div><img src={NLogo} width="30" height="30"/><h3>Notifications</h3></div>
+            <div><img src={MLogo} width="30" height="30"/><h3>Messages</h3></div>
+            <div><img src={BLogo} width="30" height="30"/><h3>Bookmarks</h3></div>
+            <div><img src={LLogo} width="30" height="30"/><h3>List</h3></div>
+            <div><img src={PLogo} width="30" height="30"/><h3>Profile</h3></div>
+            <div><img src={MoreLogo} width="30" height="30"/><h3>More</h3></div>
+            <Button className="primary-button" text="Tweet"/>
         </div>
         <div className="Feed">
-           <div className="Feed-container">
+           <div className="Feed-insert">
+               <h2>Home</h2>
+           <div className="Feed-padding">
+               <div className="Zone-tweet">
+                   <div className="profilepic-tweet"></div>
+                    <div className="Insert-post"><input type="text" name="" id="" />
+                        <div className="icons-tweet">
+                           <div className="left">
+                                <img  src={image} width="30" height="30"/>
+                                <img  src={gif} width="30" height="30"/>
+                                <img  src={stats} width="30" height="30"/>
+                                <img  src={emoji} width="30" height="30"/>
+                           </div>
+                            <div className="right">
+                                <img  src={wordsc} width="30" height="30"/>
+                                <img  src={line} width="30" height="30"/>
+                                <img  src={plus} width="30" height="30"/>
+                                <Button className="primary-button" text="Tweet"/>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+           </div>
+        </div>
+            <div className="Feed-padding">
+            <div className="Feed-container">
                <div className="User">
                 <img src={PLogo} width="30" height="30"/>
                <h3>User</h3><h4>@user</h4>
@@ -46,7 +81,7 @@ function Feed() {
                     <img src={Upload} width="30" height="30"/>
                 </div>
             </div>
-           <div className="Feed-container">
+                <div className="Feed-container">
                <div className="User">
                 <img src={PLogo} width="30" height="30"/>
                <h3>User</h3><h4>@user</h4>
@@ -64,7 +99,7 @@ function Feed() {
                     <img src={Upload} width="30" height="30"/>
                 </div>
                 </div>
-           <div className="Feed-container">
+                <div className="Feed-container">
                <div className="User">
                 <img src={PLogo} width="30" height="30"/>
                <h3>User</h3><h4>@user</h4>
@@ -82,7 +117,7 @@ function Feed() {
                     <img src={Upload} width="30" height="30"/>
                 </div>
                 </div>
-           <div className="Feed-container">
+                <div className="Feed-container">
                <div className="User">
                 <img src={PLogo} width="30" height="30"/>
                <h3>User</h3><h4>@user</h4>
@@ -100,7 +135,7 @@ function Feed() {
                     <img src={Upload} width="30" height="30"/>
                 </div>
                 </div>
-           <div className="Feed-container">
+                <div className="Feed-container">
                <div className="User">
                 <img src={PLogo} width="30" height="30"/>
                <h3>User</h3><h4>@user</h4>
@@ -117,8 +152,8 @@ function Feed() {
                     <img src={Like} width="30" height="30"/>
                     <img src={Upload} width="30" height="30"/>
                 </div>
-                
-           </div>
+                </div>
+            </div>
         </div>
         <div className="Trending">
            <div className="search"><input></input></div>
@@ -142,7 +177,7 @@ function Feed() {
                    465k tweets</h4>
                    </div>
                    <div><h4>5.Trending
-                   <h3>#EstudiantesDeIngenieriaDeSistemasUN</h3>
+                   <h3>#EstudiantesDeIngenieriasUN</h3>
                    465k tweets</h4>
                    </div>
                </div>
