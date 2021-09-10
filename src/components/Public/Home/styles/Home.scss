@@ -2,18 +2,13 @@
 @import 'mixins';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.Home {
-  text-align: center;
-}
-
-.LogoW{
-    width:410px;
+ .LogoW{
+    width:410vh;
     height:333px;
     position: relative;
-    left: -100px;
-}
+} 
 
-.Home-header {
+.Home {
   background: linear-gradient(90deg, $primary-color 50%, #ffffff 50%);
   min-height: 100vh;
   display: flex;
@@ -29,12 +24,33 @@
     color: $secodary-text-color;
 }
 
+.Home-content-left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  justify-content: center;
+
+}
+
 .Home-content-right {
   position: relative;
-  left: 80px;
+  width: 50%;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-size: 16px;
+
+  div {
+    margin: 25%;
+    div {
+      width: 100%;
+      margin: 0%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
   h2 {
     @include h2;
@@ -52,4 +68,17 @@
 
 .App-link {
   color: #61dafb;
+}
+@media screen and (max-width: 700px) {
+  .Home {
+    background: #ffffff 100%;
+    align-items: center;
+    width: 100vw;
+  }
+  .Home-content-left{
+    display: none;
+  }
+  .Home-content-right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
 }
