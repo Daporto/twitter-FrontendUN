@@ -3,7 +3,7 @@ import SearchTwitter from '../../common/SearchTwitter/SearchTwitter'
 
 const HomeRightSide = () => {
     return (
-        <div>
+        <div className="Trending">
             <SearchTwitter />
             <Trending />
         </div>

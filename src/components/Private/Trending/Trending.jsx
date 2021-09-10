@@ -1,8 +1,11 @@
+import Trend from '../Trend/Trend'
+
 const Trending = () => {
     return (
-    <div>
-        <h2>Aquí van los trends</h2>
-    </div>)
+        <div className="trends">
+            <Trend hashtag="#JessieMueller" tweets="456K"/>
+        </div>
+    )
 };
 
 export default Trending

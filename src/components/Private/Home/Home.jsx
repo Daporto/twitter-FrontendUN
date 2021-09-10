@@ -1,11 +1,11 @@
 import NavApp from '../NavApp/NavApp'
-import { restricted } from '../../../lib/routes'
 import HomeRightSide from '../HomeRightSide/HomeRightSide';
+import './styles/home.scss'
 
 const Home = (props) => {
     const { children } = props
     return (
-        <div>
+        <div className="container-total">
             <NavApp />
             {children}
             <HomeRightSide />

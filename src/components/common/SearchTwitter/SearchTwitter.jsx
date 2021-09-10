@@ -1,8 +1,9 @@
 const searchTwitter = (props) => {
     return (
-    <div>
-        <h2>Aquí barra de búsqueda</h2>
-    </div>)
+        <div className="search">
+            <input></input>
+        </div>
+    )
 };
 
 export default searchTwitter
