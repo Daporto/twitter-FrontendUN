@@ -1,12 +1,7 @@
-.Feed{
+.central-container{
     width: 90vh;
     display: flex;
     flex-direction: column;
     border-left: 1px solid #E7ECF0;
     border-right: 1px solid #E7ECF0;
-
-    h2{
-        border-bottom: 1px solid #E7ECF0;
-        padding-left: 40px;
-     }
 }

@@ -10,7 +10,7 @@ import Button from '../../common/Button/Button'
 const CreateTweet = () => {
     return (
         <div className="Feed-insert">
-               <h2>Home</h2>
+               
            <div className="Feed-padding">
                <div className="Zone-tweet">
                    <div className="profilepic-tweet"></div>
