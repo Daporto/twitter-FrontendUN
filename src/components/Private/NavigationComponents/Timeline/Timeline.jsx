@@ -1,10 +1,10 @@
-import createTweet from '../../CreateTweet/CreateTweet'
 import Tweets from '../../Tweets/Tweets'
+import CreateTweet from '../../CreateTweet/CreateTweet'
 
 const TimeLine = () => {
     return (
-        <div className="container-total">
-            <createTweet/>
+        <div className="Feed">
+            <CreateTweet/>
             <Tweets/>
         </div>
     )
