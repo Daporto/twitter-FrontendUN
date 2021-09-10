@@ -1,7 +1,9 @@
+import './styles/page.scss'
+
 const Page = (props) => {
     const {title} = props
     return (
-        <div>
+        <div className="central-container">
             <h2>{title}</h2>
         </div>
     )
