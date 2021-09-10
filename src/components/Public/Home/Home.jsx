@@ -12,7 +12,7 @@ function Home() {
         </div> 
           <div className="Home-content-right">
           
-          <div><div><img src={logoB} alt="logo" width="820" height="66"/> </div>
+          <div><div><img src={logoB} alt="logo" width="82" height="66"/> </div>
           <h1>
             Welcome to Twitter
           </h1>
