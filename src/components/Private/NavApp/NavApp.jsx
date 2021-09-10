@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import routes from '../../../lib/routes'
 import './styles/navApp.scss'
+import Logo from '../../../Images/LogoB.svg'
 import HLogo from '../../../Images/Feed/home.svg'
 import ELogo from '../../../Images/Feed/explore.svg'
 import NLogo from '../../../Images/Feed/notification.svg'
@@ -9,18 +10,20 @@ import BLogo from '../../../Images/Feed/bookmark.svg'
 import LLogo from '../../../Images/Feed/list.svg'
 import PLogo from '../../../Images/Feed/user.svg'
 import MoreLogo from '../../../Images/Feed/more.svg'
+import Button from '../../common/Button/Button'
 
 const NavApp = () => {
     const { restricted } = routes;
-    const icons = [HLogo,ELogo,NLogo,MLogo,BLogo,LLogo,PLogo,MoreLogo]
+    const icons = [HLogo, ELogo, NLogo, MLogo, BLogo, LLogo, PLogo, MoreLogo]
     return (
         <div className="navigation">
             <nav>
+                <img src={Logo} width="50" height="50" />
                 <ul>
                     {
                         restricted.map(({ path, title }, index) =>
                             <div>
-                                <img src={icons[index]} width="30" height="30"/>
+                                <img src={icons[index]} width="30" height="30" />
                                 <li>
                                     <h2>
                                         <Link to={path}>{title}</Link>
@@ -29,6 +32,7 @@ const NavApp = () => {
                             </div>)
                     }
                 </ul>
+                <Button className="primary-button" text="Tweet"/>
             </nav>
         </div>
     );

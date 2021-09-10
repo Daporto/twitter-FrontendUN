@@ -7,13 +7,27 @@
       img {
         padding-right: 20px;
       }
+
+      h3 h{
+        color: #1da1f2;
+          padding-top: 0%;
+          padding-bottom: 0%;
+      }
     }
   
-    li {
+    ul {
+      padding: 0;
       list-style-type: none;
     }
   
     a {
       color: black;
     }
+
+    Button{
+      width: 150px;
+      height: 45px;
+      margin-left: 0px;
+      border-radius: 70px;
+  }
   }

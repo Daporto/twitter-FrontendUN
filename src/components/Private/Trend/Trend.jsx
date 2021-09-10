@@ -1,10 +1,11 @@
 const Trend = (props) => {
-    const {hashtag, tweets} = props
+    const {hashtag, tweets, trendingNumber} = props
 
     return (
         <div>
-            <div>{hashtag}</div>
-            <div>{tweets} Tweets</div>
+            <h4>{trendingNumber}. Trending
+            <h3>{hashtag}</h3>
+            {tweets} Tweets</h4>
         </div>
     )
 };
