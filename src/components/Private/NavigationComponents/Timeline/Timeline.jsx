@@ -1,13 +1,11 @@
-import Page from '../Page/Page'
-import NavApp from '../../NavApp/NavApp'
-import HomeRightSide from '.././../HomeRightSide/HomeRightSide';
+import createTweet from '../../CreateTweet/CreateTweet'
+import Tweets from '../../Tweets/Tweets'
 
 const TimeLine = () => {
     return (
-        <div>
-            <Page
-                title="Home"
-            />
+        <div className="container-total">
+            <createTweet/>
+            <Tweets/>
         </div>
     )
 };
