@@ -7,14 +7,14 @@ import './styles/Home.scss'
 function Home() {
   return (
     <div className="Home">
-      <header className="Home-header">
       <div className="Home-content-left">
         <img src={logoW} className="LogoW" alt="logo"/> 
         </div> 
           <div className="Home-content-right">
-          <img src={logoB} alt="logo" width="66" height="54"/> 
+          
+          <div><div><img src={logoB} alt="logo" width="820" height="66"/> </div>
           <h1>
-            Welcome to twitter.
+            Welcome to Twitter
           </h1>
 
           <a href="./LogIn"><Button
@@ -26,8 +26,8 @@ function Home() {
             className="white-button"
             text="Sign Up"
           /></a>
+          </div>
         </div>
-      </header>
     </div>
   );
 }
