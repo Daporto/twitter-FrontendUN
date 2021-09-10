@@ -6,8 +6,8 @@ import './styles/Login.scss'
 
 function Login() {
     return (
-        <div className="container-total">
-        <div className="container">
+        <div className="container-total-login">
+        <div className="container-login">
             <div>
             <FormHeader
                 title="Login to your account"

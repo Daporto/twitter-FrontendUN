@@ -7,6 +7,7 @@ import './styles/ForgotPassword.scss'
 function ForgetPw() {
     return (
         <div className="FP">
+            <div className="FP-content">
             <FormHeader
                 title="Recover your password"
                 subtitle="My Twitter"
@@ -24,7 +25,8 @@ function ForgetPw() {
                     text="Recover your password"
                 />
             </Form>           
-            <div className="text"><h4 className="secondary-text">Return to <a href="../Login">Login</a></h4></div>
+            <h4 className="secondary-text">Return to <a href="../Login">Login</a></h4>
+            </div>
         </div>
     );
 }

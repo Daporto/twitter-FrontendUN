@@ -24,7 +24,7 @@ import Button from '../../common/Button/Button'
 
 function Feed() {
     return (
-        <div className="container-total">
+        <div className="container-total-feed">
         <div className="navigation">
             <img  src={Logo} width="50" height="50"/>
             <div ><img  src={HLogo} width="30" height="30"/><h3><h>Home</h></h3></div>

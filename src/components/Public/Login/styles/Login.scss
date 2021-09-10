@@ -1,15 +1,18 @@
-.container {
+.container-login {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    width: 20%;
+    width: 50vh;
     height: 50%;
+    margin-bottom: 40px;
+    margin-top: 20px;
 }
 
-.container-total {
+.container-total-login {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative
 }
 /* .div-form {
     display: flex;

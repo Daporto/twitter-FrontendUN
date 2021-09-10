@@ -6,8 +6,8 @@ import './Styles/SignUp.scss'
 
 function SignUp() {
     return (
-        <div className="container-total">
-        <div className="container">
+        <div className="container-total-signup">
+        <div className="container-signup">
             <FormHeader
                 title="Create your account"
                 subtitle="My Twitter"
