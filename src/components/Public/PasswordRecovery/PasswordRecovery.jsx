@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
@@ -8,6 +8,7 @@ import './styles/passwordRecovery.scss'
 
 function PasswordRecovery() {
     return (
+        <HelmetProvider>
         <div className="FP">
             <Helmet>
                 <title>Password recovery</title>
@@ -37,6 +38,7 @@ function PasswordRecovery() {
             <h4 className="secondary-text">Return to <a href="../Login">Login</a></h4>
             </div>
         </div>
+        </HelmetProvider>
     );
 }
 export default PasswordRecovery;

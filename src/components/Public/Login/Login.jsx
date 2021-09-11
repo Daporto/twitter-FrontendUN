@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
@@ -8,6 +8,7 @@ import './styles/Login.scss'
 
 function Login() {
     return (
+        <HelmetProvider>
         <div className="container-total-login">
             <Helmet>
                 <title>Twitter Sign in</title>
@@ -47,6 +48,7 @@ function Login() {
                 <h4 className="secondary-text">Don't have an account? <a href="../SignUp">Join free today</a></h4>
             </div>
         </div>
+        </HelmetProvider>
     );
 }
 export default Login;

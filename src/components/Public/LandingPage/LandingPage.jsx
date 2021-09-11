@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import logoW from '../../../Images/LogoW.svg';
 import logoB from '../../../Images/LogoB.svg';
@@ -7,6 +7,7 @@ import './styles/landingPage.scss'
 
 function LandingPage() {
   return (
+    <HelmetProvider>
     <div className="Home">
       <Helmet>
         <title>Twitter Landing Page</title>
@@ -37,6 +38,7 @@ function LandingPage() {
           </div>
         </div>
     </div>
+    </HelmetProvider>
   );
 }
 

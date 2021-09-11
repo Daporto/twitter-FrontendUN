@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import NavApp from '../NavApp/NavApp'
 import HomeRightSide from '../HomeRightSide/HomeRightSide';
@@ -7,6 +7,7 @@ import './styles/home.scss'
 const Home = (props) => {
     const { children, selectedPath } = props
     return (
+        <HelmetProvider>
         <div className="container-total">
             <Helmet>
                 <title>Home</title>
@@ -19,6 +20,7 @@ const Home = (props) => {
             {children}
             <HomeRightSide />
         </div>
+        </HelmetProvider>
     )
 };
 export default Home;
