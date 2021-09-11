@@ -51,7 +51,7 @@ const routes = {
             component: () => {return(<HomeApp selectedPath="/home/profile"><Profile/></HomeApp>)}
         },
         {
-            title: "More",
+            title: "More ",
             path: "/home/more",
             component: () => {return(<HomeApp selectedPath="/home/more"><More/></HomeApp>)}
         }
