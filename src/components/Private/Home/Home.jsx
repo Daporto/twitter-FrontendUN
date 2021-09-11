@@ -5,7 +5,7 @@ import HomeRightSide from '../HomeRightSide/HomeRightSide';
 import './styles/home.scss'
 
 const Home = (props) => {
-    const { children } = props
+    const { children, selectedPath } = props
     return (
         <div className="container-total">
             <Helmet>
@@ -15,7 +15,7 @@ const Home = (props) => {
                     content="See and search tweets of all people you are following. Here you can see the top trending topic also"
                 />
             </Helmet>
-            <NavApp />
+            <NavApp selectedPath={selectedPath}/>
             {children}
             <HomeRightSide />
         </div>

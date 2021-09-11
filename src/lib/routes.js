@@ -19,42 +19,42 @@ const routes = {
         {
             title: "Home",
             path: "/home",
-            component: () => {return(<HomeApp><Timeline/></HomeApp>)}
+            component: () => {return(<HomeApp selectedPath="/home"><Timeline/></HomeApp>)}
         },
         {
             title: "Explore",
             path: "/home/explore",
-            component: () => {return(<HomeApp><Explore/></HomeApp>)}
+            component: () => {return(<HomeApp selectedPath="/home/explore"><Explore/></HomeApp>)}
         },
         {
             title: "Notifications",
             path: "/home/notifications",
-            component: () => {return(<HomeApp><Notifications/></HomeApp>)}
+            component: () => {return(<HomeApp selectedPath="/home/notifications"><Notifications/></HomeApp>)}
         },
         {
             title: "Messages",
             path: "/home/messages",
-            component: () => {return(<HomeApp><Messages/></HomeApp>)}
+            component: () => {return(<HomeApp selectedPath="/home/messages"><Messages/></HomeApp>)}
         },
         {
             title: "Bookmarks",
             path: "/home/bookmarks",
-            component: () => {return(<HomeApp><Bookmarks/></HomeApp>)}
+            component: () => {return(<HomeApp selectedPath="/home/bookmarks"><Bookmarks/></HomeApp>)}
         },
         {
             title: "Lists",
             path: "/home/lists",
-            component: () => {return(<HomeApp><Lists/></HomeApp>)}
+            component: () => {return(<HomeApp selectedPath="/home/lists"><Lists/></HomeApp>)}
         },
         {
             title: "Profile",
             path: "/home/profile",
-            component: () => {return(<HomeApp><Profile/></HomeApp>)}
+            component: () => {return(<HomeApp selectedPath="/home/profile"><Profile/></HomeApp>)}
         },
         {
             title: "More",
             path: "/home/more",
-            component: () => {return(<HomeApp><More/></HomeApp>)}
+            component: () => {return(<HomeApp selectedPath="/home/more"><More/></HomeApp>)}
         }
     ],
     unrestricted: [

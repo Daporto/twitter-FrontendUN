@@ -12,7 +12,8 @@ import PLogo from '../../../Images/Feed/user.svg'
 import MoreLogo from '../../../Images/Feed/more.svg'
 import Button from '../../common/Button/Button'
 
-const NavApp = () => {
+const NavApp = (props) => {
+    const {selectedPath} = props;
     const { restricted } = routes;
     const icons = [HLogo, ELogo, NLogo, MLogo, BLogo, LLogo, PLogo, MoreLogo]
     return (
