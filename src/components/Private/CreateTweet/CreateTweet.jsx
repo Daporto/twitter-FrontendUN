@@ -6,6 +6,7 @@ import wordsc from  '../../../Images/Feed/tweets/right-words.svg'
 import line from  '../../../Images/Feed/tweets/right-line.svg'
 import plus from  '../../../Images/Feed/tweets/right-plus.svg'
 import Button from '../../common/Button/Button'
+import './styles/createTweet.scss'
 
 const CreateTweet = () => {
     return (

@@ -4,9 +4,19 @@
     flex-direction: column;
     border-left: 1px solid #E7ECF0;
     border-right: 1px solid #E7ECF0;
-
-    h2{
+    .home{
+        display: flex;
+        justify-content: space-between;
         border-bottom: 1px solid #E7ECF0;
-        padding-left: 40px;
-     }
+        padding-top: 10px;
+        padding-bottom: 5px;
+        img{
+            padding-top: 20px;
+            padding-right: 30px;
+        }
+        h2{
+            padding-left: 40px;
+            margin-block-end: 0em;
+         }
+    }
 }
