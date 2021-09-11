@@ -10,7 +10,7 @@ import Messages from '../components/Private/NavigationComponents/Messages/Messag
 import Bookmarks from '../components/Private/NavigationComponents/Bookmarks/Bookmarks';
 import Lists from '../components/Private/NavigationComponents/Lists/Lists';
 import Profile from '../components/Private/NavigationComponents/Profile/Profile';
-import More from '../components/Private/NavigationComponents/More/More';
+//import More from '../components/Private/NavigationComponents/More/More';
 import HomeApp from '../components/Private/Home/Home'
 
 const routes = {
@@ -50,11 +50,11 @@ const routes = {
             path: "/home/profile",
             component: () => {return(<HomeApp selectedPath="/home/profile"><Profile/></HomeApp>)}
         },
-        {
+/*         {
             title: "More",
             path: "/home/more",
             component: () => {return(<HomeApp selectedPath="/home/more"><More/></HomeApp>)}
-        }
+        } */
     ],
     unrestricted: [
         {
