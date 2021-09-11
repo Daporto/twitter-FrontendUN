@@ -13,7 +13,7 @@ import MoreLogo from '../../../Images/Feed/more.svg'
 import Button from '../../common/Button/Button'
 
 const NavApp = (props) => {
-    const {selectedPath} = props;
+    //const {selectedPath} = props;
     const { restricted } = routes;
     const icons = [HLogo, ELogo, NLogo, MLogo, BLogo, LLogo, PLogo, MoreLogo]
     return (
@@ -24,9 +24,8 @@ const NavApp = (props) => {
                     {
                         restricted.map(({ path, title }, index) =>
                             <div>
-                                <img src={icons[index]} alt={icons[index].toString} width="30" height="30" />
-                                <h1>{"nav-item-"+index.toString()}</h1>
-                                <li key={"nav-item-"+index.toString()}>
+                                <img src={icons[index]} alt={title} width="30" height="30" />
+                            <li key={"nav-item-"+index.toString()}>
                                     <h2>
                                         <Link to={path}>{title}</Link>
                                     </h2>
