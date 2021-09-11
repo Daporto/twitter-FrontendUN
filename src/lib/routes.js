@@ -1,8 +1,8 @@
 
 import Login from '../components/Public/Login/Login';
 import SignUp from '../components/Public/SignUp/SignUp';
-import Home from '../components/Public/Home/Home';
-import ForgotPassword from '../components/Public/ForgotPassword/ForgotPassword';
+import LandingPage from '../components/Public/LandingPage/LandingPage';
+import PasswordRecovery from '../components/Public/PasswordRecovery/PasswordRecovery';
 import Timeline from '../components/Private/NavigationComponents/Timeline/Timeline';
 import Explore from '../components/Private/NavigationComponents/Explore/Explore';
 import Notifications from '../components/Private/NavigationComponents/Notifications/Notifications';
@@ -59,9 +59,9 @@ const routes = {
     ],
     unrestricted: [
         {
-            title: "Home",
+            title: "Landing Page",
             path: "/",
-            component: Home,
+            component: LandingPage,
         },
         {
             title: "Login",
@@ -69,14 +69,14 @@ const routes = {
             component: Login,
         },
         {
+            title: "Password Recovery",
+            path: "/login/passwordRecovery",
+            component: PasswordRecovery,
+        },
+        {
             title: "Sign Up",
             path: "/signup",
             component: SignUp,
-        },
-        {
-            title: "Forgot Password",
-            path: "/forgotpassword",
-            component: ForgotPassword,
         },
         {
             title: "Feed",
