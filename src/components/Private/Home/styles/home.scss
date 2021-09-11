@@ -6,7 +6,7 @@
     position: relative; 
 }
 
-@media (max-width:600px) {
+@media (max-width:650px) {
     .container-total{
         height: 100vh;
         display: flex;
@@ -17,10 +17,14 @@
         .Trending{
             margin-top: 30px;
             width: 90vh;
-        }
-        .trends{
-            div{
-                padding-bottom: 3%;
+            .search{
+                display: none;
+            }
+            .trend{
+                width: 90%;
+                div{
+                    padding-bottom: 3%;
+                }
             }
         }
     }
