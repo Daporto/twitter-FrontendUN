@@ -20,20 +20,21 @@ const NavApp = (props) => {
         <div className="navigation">
             <nav>
                 <img src={Logo} alt="LogoTwHome" width="50" height="50" />
-                <ul>
-                    {
-                        restricted.map(({ path, title }, index) =>
-                            <div key={"nav-item"+index}>
-                                <img src={icons[index]} alt={title} width="30" height="30" />
+                {
+                    restricted.map(({ path, title }, index) =>
+                        <div key={"nav-item" + index}>
+                            <img src={icons[index]} alt={title} width="30" height="30" />
+                            <ul>
                                 <li>
                                     <h2>
                                         <Link to={path}>{title}</Link>
                                     </h2>
                                 </li>
-                            </div>)
-                    }
-                </ul>
-                <Button className="primary-button" text="Tweet"/>
+                            </ul>
+                        </div>)
+
+                }
+                <Button className="primary-button" text="Tweet" />
             </nav>
         </div>
     );
