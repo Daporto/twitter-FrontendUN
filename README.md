@@ -43,8 +43,7 @@ Open [https://twitter-frontendun.web.app/](https://twitter-frontendun.web.app/) 
 - /home/more
 
 ## Lighthouse test results
-We executed the lighthouse test in incognite mode due to some factor such as chrome extensions and stored data could \
-affect the performance.\
+We executed the lighthouse test in incognite mode due to some factor such as chrome extensions and stored data could affect the performance.\
 ![alt text](https://firebasestorage.googleapis.com/v0/b/images-hosting-84deb.appspot.com/o/warning-lighthouse.png?alt=media&token=867e619b-04fc-48ce-af03-0436f016e4f2)
 
 ### Results in desktop device
