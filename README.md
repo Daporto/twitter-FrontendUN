@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Twitter App implementation
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -14,11 +14,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -29,42 +24,31 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Link
+This application was deployed in a firebase hosting.\
+Open [https://twitter-frontendun.web.app/](https://twitter-frontendun.web.app/) to view it in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Routes
+- /
+- /login
+- /login/passwordRecovery
+- /signup
+- /home
+- /home/explore
+- /home/notifications
+- /home/messages
+- /home/bookmarks
+- /home/lists
+- /home/profile
+- /home/more
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Lighthouse test results
+We executed the lighthouse test in incognite mode due to some factor such as chrome extensions and stored data could \
+affect the performance.\
+![alt text](https://firebasestorage.googleapis.com/v0/b/images-hosting-84deb.appspot.com/o/warning-lighthouse.png?alt=media&token=867e619b-04fc-48ce-af03-0436f016e4f2)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Results in desktop device
+![alt text](https://firebasestorage.googleapis.com/v0/b/images-hosting-84deb.appspot.com/o/desktop-lighthouse.png?alt=media&token=5dda4252-c887-434a-977f-88e96c43d5c7)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Results in mobile device
+![alt text](https://firebasestorage.googleapis.com/v0/b/images-hosting-84deb.appspot.com/o/mobile-lighthouse.png?alt=media&token=f6c50f63-e327-4178-9422-28a56b585822)
