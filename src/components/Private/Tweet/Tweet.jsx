@@ -15,10 +15,10 @@ const Tweet = (props) => {
                </div>
                <h4>{tweetContent}</h4>
                <div className="links">
-                    <img src={Comment} width="30" height="30"/>
-                    <img src={Retweet} width="30" height="30"/>
-                    <img src={Like} width="30" height="30"/>
-                    <img src={Upload} width="30" height="30"/>
+                    <img src={Comment} alt="Comment" width="30" height="30"/>
+                    <img src={Retweet} alt="Retweet" width="30" height="30"/>
+                    <img src={Like} alt="Like" width="30" height="30"/>
+                    <img src={Upload} alt="Upload" width="30" height="30"/>
                 </div>
             </div>
     )

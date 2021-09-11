@@ -18,12 +18,12 @@ const NavApp = () => {
     return (
         <div className="navigation">
             <nav>
-                <img src={Logo} width="50" height="50" />
+                <img src={Logo} alt="LogoTwHome" width="50" height="50" />
                 <ul>
                     {
                         restricted.map(({ path, title }, index) =>
                             <div>
-                                <img src={icons[index]} width="30" height="30" />
+                                <img src={icons[index]} alt={icons[index].toString} width="30" height="30" />
                                 <li>
                                     <h2>
                                         <Link to={path}>{title}</Link>
