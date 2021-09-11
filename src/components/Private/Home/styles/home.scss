@@ -5,7 +5,155 @@
     align-items: flex-start;
     position: relative; 
 }
+.container-total-feed {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative; 
+}
+.navigation{
+    margin-right: 30px;
+    padding-top: 20px;
+}
+.navigation div{
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+}
+.navigation div img{
+    padding-right: 20px;
+}
+.navigation div h3 h{
+    color: #1da1f2;
+    padding-top: 0%;
+    padding-bottom: 0%;
 
+}
+.navigation Button{
+    width: 150px;
+    height: 45px;
+    margin-left: 0px;
+    border-radius: 70px;
+}
+.Feed{
+    width: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #E7ECF0;
+    border-right: 1px solid #E7ECF0;
+}
+
+.Feed-padding{
+    padding-left: 40px;;
+}
+.Feed-container{
+    font-style: normal;
+    text-align: justify;
+    width: 95%;
+    height: 50%;
+    border-bottom: 1px solid #E7ECF0;
+    padding-bottom: 20px;
+}
+.Feed-container div{
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+}
+.Feed-container h4{
+    font-weight: normal;
+    margin-top: 0px;
+}
+@media screen and (max-width: 480px) {
+    #feed {
+      width: calc(100% - 80px);
+    }
+  }
+
+.User h3{
+    padding-left: 10px;
+}
+.User h4{
+    margin-top: 21px;
+    padding-left: 5px;
+}
+
+.links{
+    justify-content: space-evenly;
+}
+
+.links img{
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+ .Feed-insert{
+     border-bottom: 10px solid #E7ECF0;
+ }
+
+ .Feed-insert h2{
+    border-bottom: 1px solid #E7ECF0;
+    padding-left: 40px;
+ }
+
+.icons-tweet{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px; 
+}
+.left{
+    padding-right: 20px;
+    padding-top: 5px;
+    flex-grow: 1;
+}
+
+.left img{
+    padding-right: 20px;
+}
+
+.right{
+    padding-right: 20px;
+    display: flex;
+}
+
+.right img{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 5px;
+    margin: 0%;
+}
+
+.right Button{
+    margin-left: 10px;
+    margin-right: 0%;
+    width: 100px;
+    margin-top: 0px;
+    padding: 0%;
+    border-radius: 50px;
+}
+
+.Trending{
+    margin-left: 30px;
+    padding-top: 20px;
+}
+.trends{
+    background-color: #F6F8FA;
+    padding-left: 10px;
+}
+.trends div h4{
+    font-weight: normal;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin: 0%;
+}
+.trends div h4 h3{
+    margin: 0%;
+}
+.trends div {
+    padding-top: 3%;
+    padding-bottom: 6%;
+    border-bottom: 1px solid #E7ECF0;
+ }
 @media (max-width:650px) {
     .container-total{
         height: 100vh;
