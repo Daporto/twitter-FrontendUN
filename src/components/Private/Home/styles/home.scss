@@ -5,3 +5,23 @@
     align-items: center;
     position: relative;   
 }
+
+@media (max-width:600px) {
+    .container-total{
+        height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        flex-direction: column;
+        justify-content: flex-start;
+        .Trending{
+            margin-top: 30px;
+            width: 90vh;
+        }
+        .trends{
+            div{
+                padding-bottom: 3%;
+            }
+        }
+    }
+}
