@@ -1,0 +1,17 @@
+.Feed-container{
+    font-style: normal;
+    text-align: justify;
+    width: 95%;
+    height: 50%;
+    border-bottom: 1px solid #E7ECF0;
+    padding-bottom: 20px;
+}
+.Feed-container div{
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+}
+.Feed-container h4{
+    font-weight: normal;
+    margin-top: 0px;
+}

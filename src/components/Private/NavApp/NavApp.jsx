@@ -25,8 +25,7 @@ const NavApp = (props) => {
                         restricted.map(({ path, title }, index) =>
                             <div>
                                 <img src={icons[index]} alt={icons[index].toString} width="30" height="30" />
-                                <h1>{"nav-item-"+index.toString()}</h1>
-                                <li key={"nav-item-"+index.toString()}>
+                                <li key={"nav-item-"+index}>
                                     <h2>
                                         <Link to={path}>{title}</Link>
                                     </h2>

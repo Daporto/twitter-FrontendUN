@@ -3,7 +3,7 @@ import Retweet from '../../../Images/Feed/post/refreshing.svg'
 import Like from '../../../Images/Feed/post/heart.svg'
 import Upload from '../../../Images/Feed/post/upload.svg'
 import PLogo from '../../../Images/Feed/user.svg'
-
+import './styles/tweet.scss'
 const Tweet = (props) => {
     const {user, tweetContent} = props
 
