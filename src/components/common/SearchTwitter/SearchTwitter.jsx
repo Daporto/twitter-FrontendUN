@@ -4,7 +4,11 @@ const searchTwitter = (props) => {
     return (
         <div className="search">
             <img src={SearchLogo} alt="SearchLogo" width="30" height="30" />
-            <input></input>
+            <input className="form-element"
+                    type="text"
+                    id="Search"
+                    name="Search"
+                    placeholder="Search Twitter"/>
         </div>
     )
 };

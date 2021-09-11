@@ -4,37 +4,7 @@
     justify-content: center;
     align-items: flex-start;
     position: relative; 
-}
-.container-total-feed {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative; 
-}
-.navigation{
-    margin-right: 30px;
     padding-top: 20px;
-}
-.navigation div{
-    flex-direction: row;
-    align-items: center;
-    display: flex;
-}
-.navigation div img{
-    padding-right: 20px;
-}
-.navigation div h3 h{
-    color: #1da1f2;
-    padding-top: 0%;
-    padding-bottom: 0%;
-
-}
-.navigation Button{
-    width: 150px;
-    height: 45px;
-    margin-left: 0px;
-    border-radius: 70px;
 }
 .Feed{
     width: 90vh;
@@ -132,28 +102,6 @@
     border-radius: 50px;
 }
 
-.Trending{
-    margin-left: 30px;
-    padding-top: 20px;
-}
-.trends{
-    background-color: #F6F8FA;
-    padding-left: 10px;
-}
-.trends div h4{
-    font-weight: normal;
-    padding-top: 0%;
-    padding-bottom: 0%;
-    margin: 0%;
-}
-.trends div h4 h3{
-    margin: 0%;
-}
-.trends div {
-    padding-top: 3%;
-    padding-bottom: 6%;
-    border-bottom: 1px solid #E7ECF0;
- }
 @media (max-width:650px) {
     .container-total{
         height: 100vh;

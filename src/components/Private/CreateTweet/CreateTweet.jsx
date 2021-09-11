@@ -15,7 +15,12 @@ const CreateTweet = () => {
            <div className="Feed-padding">
                <div className="Zone-tweet">
                    <div className="profilepic-tweet"></div>
-                    <div className="Insert-post"><input type="text" name="" id="" />
+                    <div className="Insert-post">
+                    <input className="form-element"
+                    type="text"
+                    id="InsertTw"
+                    name="InsertTw"
+                    placeholder="What’s happening"/>
                         <div className="icons-tweet">
                            <div className="left">
                                 <img  src={galery} alt="galery" width="30" height="30"/>
