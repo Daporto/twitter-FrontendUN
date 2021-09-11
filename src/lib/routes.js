@@ -12,7 +12,6 @@ import Lists from '../components/Private/NavigationComponents/Lists/Lists';
 import Profile from '../components/Private/NavigationComponents/Profile/Profile';
 import More from '../components/Private/NavigationComponents/More/More';
 import HomeApp from '../components/Private/Home/Home'
-import Feed from '../components/Public/Feed/Feed';
 
 const routes = {
     restricted: [
@@ -77,11 +76,6 @@ const routes = {
             title: "Sign Up",
             path: "/signup",
             component: SignUp,
-        },
-        {
-            title: "Feed",
-            path: "/feed",
-            component: Feed,
         }
     ]
 }
