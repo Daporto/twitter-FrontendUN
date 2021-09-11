@@ -18,15 +18,15 @@ const CreateTweet = () => {
                     <div className="Insert-post"><input type="text" name="" id="" />
                         <div className="icons-tweet">
                            <div className="left">
-                                <img  src={image} width="30" height="30"/>
-                                <img  src={gif} width="30" height="30"/>
-                                <img  src={stats} width="30" height="30"/>
-                                <img  src={emoji} width="30" height="30"/>
+                                <img  src={image} alt="image" width="30" height="30"/>
+                                <img  src={gif} alt="gif" width="30" height="30"/>
+                                <img  src={stats} alt="stats" width="30" height="30"/>
+                                <img  src={emoji} alt="emoji" width="30" height="30"/>
                            </div>
                             <div className="right">
-                                <img  src={wordsc} width="30" height="30"/>
-                                <img  src={line} width="30" height="30"/>
-                                <img  src={plus} width="30" height="30"/>
+                                <img  src={wordsc} alt="wordsc" width="30" height="30"/>
+                                <img  src={line} alt="line" width="30" height="30"/>
+                                <img  src={plus} alt="plus" width="30" height="30"/>
                                 <Button className="primary-button" text="Tweet"/>
                             </div>
                         </div>
