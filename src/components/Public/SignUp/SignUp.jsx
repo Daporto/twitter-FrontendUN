@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet'
+
 import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
 import Button from '../../common/Button/Button'
@@ -7,6 +9,13 @@ import './Styles/SignUp.scss'
 function SignUp() {
     return (
         <div className="container-total-signup">
+            <Helmet>
+                <title>Sign up</title>
+                <meta
+                    name="description"
+                    content="Create a twitter account. Join now!"
+                />
+            </Helmet>
         <div className="container-signup">
             <FormHeader
                 title="Create your account"

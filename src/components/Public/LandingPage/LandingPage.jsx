@@ -1,12 +1,20 @@
+import { Helmet } from 'react-helmet'
+
 import logoW from '../../../Images/LogoW.svg';
 import logoB from '../../../Images/LogoB.svg';
-//import '../../../styles/home.scss';
 import Button from '../../common/Button/Button';
 import './styles/landingPage.scss'
 
 function LandingPage() {
   return (
     <div className="Home">
+      <Helmet>
+        <title>Twitter Landing Page</title>
+        <meta
+          name="description"
+          content="This is twitter landing page. Sign in or create an account"
+        />
+      </Helmet>
       <div className="Home-content-left">
         <img src={logoW} className="LogoW" alt="logo"/> 
         </div> 

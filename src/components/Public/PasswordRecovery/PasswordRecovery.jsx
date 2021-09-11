@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet'
+
 import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
 import Button from '../../common/Button/Button'
@@ -7,6 +9,13 @@ import './styles/passwordRecovery.scss'
 function PasswordRecovery() {
     return (
         <div className="FP">
+            <Helmet>
+                <title>Password recovery</title>
+                <meta
+                    name="description"
+                    content="You can reset your password entering your email"
+                />
+            </Helmet>
             <div className="FP-content">
             <FormHeader
                 title="Recover your password"
