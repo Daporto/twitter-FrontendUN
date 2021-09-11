@@ -2,9 +2,9 @@ import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
 import Button from '../../common/Button/Button'
 import FormHeader from '../../common/FormHeader/FormHeader'
-import './styles/ForgotPassword.scss'
+import './styles/passwordRecovery.scss'
 
-function ForgetPw() {
+function PasswordRecovery() {
     return (
         <div className="FP">
             <div className="FP-content">
@@ -30,4 +30,4 @@ function ForgetPw() {
         </div>
     );
 }
-export default ForgetPw;
+export default PasswordRecovery;
