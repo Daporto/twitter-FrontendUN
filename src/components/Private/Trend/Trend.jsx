@@ -3,9 +3,9 @@ const Trend = (props) => {
 
     return (
         <div>
-            <h4>{trendingNumber}. Trending
+            <h4>{trendingNumber}. Trending</h4>
             <h3>{hashtag} </h3>
-            {tweets} Tweets</h4>
+            <h4>{tweets} Tweets</h4>
         </div>
     )
 };
