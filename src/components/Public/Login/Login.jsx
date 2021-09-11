@@ -28,7 +28,7 @@ function Login() {
                     value="Password"
                     required="required"
                 />
-                <a href="./ForgotPassword">Forgot Password?</a><br/>
+                <a href="./login/passwordRecovery">Forgot Password?</a><br/>
                 <Button
                     className="primary-button"
                     text="Login now"

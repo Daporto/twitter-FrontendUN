@@ -2,9 +2,9 @@ import logoW from '../../../Images/LogoW.svg';
 import logoB from '../../../Images/LogoB.svg';
 //import '../../../styles/home.scss';
 import Button from '../../common/Button/Button';
-import './styles/Home.scss'
+import './styles/landingPage.scss'
 
-function Home() {
+function LandingPage() {
   return (
     <div className="Home">
       <div className="Home-content-left">
@@ -32,4 +32,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default LandingPage;
