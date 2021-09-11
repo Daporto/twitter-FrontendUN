@@ -31,3 +31,9 @@
       border-radius: 70px;
   }
   }
+
+  @media (max-width:500px) {
+    .navigation{
+      display: none;
+    }
+  }
