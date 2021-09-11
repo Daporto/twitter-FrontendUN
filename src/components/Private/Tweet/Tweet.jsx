@@ -10,7 +10,7 @@ const Tweet = (props) => {
     return (
         <div className="Feed-container">
                <div className="User">
-                <img src={PLogo} width="30" height="30"/>
+                <img src={PLogo} alt="PLogo" width="30" height="30"/>
                <h3>{user}</h3><h4>@{user}</h4>
                </div>
                <h4>{tweetContent}</h4>

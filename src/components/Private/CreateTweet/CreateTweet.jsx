@@ -1,4 +1,4 @@
-import image from  '../../../Images/Feed/tweets/insert-image.svg'
+import galeria from  '../../../Images/Feed/tweets/insert-image.svg'
 import gif from  '../../../Images/Feed/tweets/insert-gif.svg'
 import stats from  '../../../Images/Feed/tweets/insert-stats.svg'
 import emoji from  '../../../Images/Feed/tweets/insert-emoji.svg'
@@ -15,10 +15,10 @@ const CreateTweet = () => {
            <div className="Feed-padding">
                <div className="Zone-tweet">
                    <div className="profilepic-tweet"></div>
-                    <div className="Insert-post"><input type="text" name="" id="" />
+                    <div className="Insert-post"><input alt="inputTweet" type="text" name="" id="" />
                         <div className="icons-tweet">
                            <div className="left">
-                                <img  src={image} alt="image" width="30" height="30"/>
+                                <img  src={galeria} alt="galeria" width="30" height="30"/>
                                 <img  src={gif} alt="gif" width="30" height="30"/>
                                 <img  src={stats} alt="stats" width="30" height="30"/>
                                 <img  src={emoji} alt="emoji" width="30" height="30"/>
