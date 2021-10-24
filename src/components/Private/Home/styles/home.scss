@@ -1,3 +1,5 @@
+@import '../../../../variables.scss';
+
 .container-total {
     height: 100vh;
     display: flex;
@@ -10,8 +12,8 @@
     width: 90vh;
     display: flex;
     flex-direction: column;
-    border-left: 1px solid #E7ECF0;
-    border-right: 1px solid #E7ECF0;
+    border-left: 1px solid $trends-div-color;
+    border-right: 1px solid $trends-div-color;
 }
 
 .Feed-padding{
@@ -22,7 +24,7 @@
     text-align: justify;
     width: 95%;
     height: 50%;
-    border-bottom: 1px solid #E7ECF0;
+    border-bottom: 1px solid $trends-div-color;
     padding-bottom: 20px;
 }
 .Feed-container div{
@@ -58,11 +60,11 @@
     
 }
  .Feed-insert{
-     border-bottom: 10px solid #E7ECF0;
+     border-bottom: 10px solid $trends-div-color;
  }
 
  .Feed-insert h2{
-    border-bottom: 1px solid #E7ECF0;
+    border-bottom: 1px solid $trends-div-color;
     padding-left: 40px;
  }
 

@@ -1,5 +1,7 @@
+@import '../../../../variables.scss';
+
 @mixin a {
-    color: #1da0f2;
+    color: $primary-color;
     text-decoration: none;
 }
 

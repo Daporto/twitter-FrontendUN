@@ -17,7 +17,7 @@ function Login() {
                     content="Login with your twitter username or email and password"
                 />
             </Helmet>
-            <div className="container-login">
+            <div className="container">
                 <div>
                     <FormHeader
                         title="Login to your account"

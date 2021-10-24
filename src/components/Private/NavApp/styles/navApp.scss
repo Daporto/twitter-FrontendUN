@@ -1,3 +1,5 @@
+@import '../../../../variables.scss';
+
 .navigation {
   padding-left: 20px;
   padding-right: 20px;
@@ -11,7 +13,7 @@
       }
 
       h3 h{
-        color: #1da1f2;
+        color: $primary-color;
           padding-top: 0%;
           padding-bottom: 0%;
       }
@@ -26,7 +28,7 @@
     }
   
     a {
-      color: black;
+      color: $black-color;
     }
 
     Button{

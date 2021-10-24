@@ -8,14 +8,14 @@
 } 
 
 .Home {
-  background: linear-gradient(90deg, $primary-color 50%, #ffffff 50%);
+  background: linear-gradient(90deg, $primary-color 50%, $white-color 50%);
   height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
+  color: $black-color;
 }
 
 
@@ -67,11 +67,11 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: $link-color;
 }
 @media screen and (max-width: 700px) {
   .Home {
-    background: #ffffff 100%;
+    background: $white-color 100%;
     align-items: center;
     width: 100vw;
   }

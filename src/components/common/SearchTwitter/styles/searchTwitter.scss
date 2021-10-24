@@ -1,8 +1,10 @@
+@import '../../../../variables.scss';
+
 .search{
     display: flex;
     position: relative;
     border-radius: 40px;
-    background-color: #E7ECF0;
+    background-color: $trends-div-color;
     width:  30vw;
     img{
         padding-top: 20px;
@@ -10,7 +12,7 @@
         padding-right: 5px;
     }
     input{
-        background-color: #E7ECF0;
+        background-color: $trends-div-color;
         
     }
 }

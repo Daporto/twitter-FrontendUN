@@ -1,9 +1,10 @@
+@import 'src/variables.scss';
+
 .trend{
-    background-color: #F6F8FA;
+    background-color: $background-div-trends-color;
     padding-left: 10px;
     width: 30vw;
     margin-top: 15px;
-    font-family: Roboto;
 }
 .trend div h4{
     font-style: normal;
@@ -11,11 +12,11 @@
     padding-top: 0%;
     padding-bottom: 0%;
     margin: 0%;
-    color: #828282;
+    color: $trends-div-h4-color;
 }
 .trend div h3{
     margin: 0%;
-    color: #333333;
+    color: $trends-div-h3-color;
 }
 .trendTitle{
     padding-top: 9%;
@@ -33,5 +34,5 @@
 .ntrends div{
     padding-top: 3%;
     padding-bottom: 6%;
-    border-bottom: 1px solid #E7ECF0;
+    border-bottom: 1px solid $trends-div-color;
  }

@@ -1,6 +1,8 @@
+@import '../../../../variables.scss';
+
 .Feed-insert{
     padding-top: 10px;
-    border-bottom: 10px solid #E7ECF0;
+    border-bottom: 10px solid $trends-div-color;
 }
 
 .Feed-padding{

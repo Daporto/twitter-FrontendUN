@@ -5,12 +5,12 @@ a {
   }
 
 .label-form {
-    color: #4A5568;
+    color: $label-input-form-color;
 }
 
 input {
     @include input(50vh, 50px);
-    border: 1px solid #E8E8E8;
+    border: 1px solid $input-color;
     box-sizing: border-box;
     border-radius: 5px;
 }

@@ -17,7 +17,7 @@ function SignUp() {
                     content="Create a twitter account. Join now!"
                 />
             </Helmet>
-        <div className="container-signup">
+        <div className="container">
             <FormHeader
                 title="Create your account"
                 subtitle="My Twitter"

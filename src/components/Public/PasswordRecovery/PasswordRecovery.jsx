@@ -17,7 +17,7 @@ function PasswordRecovery() {
                     content="You can reset your password entering your email"
                 />
             </Helmet>
-            <div className="FP-content">
+            <div className="container">
             <FormHeader
                 title="Recover your password"
                 subtitle="My Twitter"
