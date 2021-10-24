@@ -22,38 +22,38 @@ const routes = {
         },
         {
             title: "Explore",
-            path: "/home/explore",
-            component: () => {return(<HomeApp selectedPath="/home/explore"><Explore/></HomeApp>)}
+            path: "/explore",
+            component: () => {return(<HomeApp selectedPath="/explore"><Explore/></HomeApp>)}
         },
         {
             title: "Notifications",
-            path: "/home/notifications",
-            component: () => {return(<HomeApp selectedPath="/home/notifications"><Notifications/></HomeApp>)}
+            path: "/notifications",
+            component: () => {return(<HomeApp selectedPath="/notifications"><Notifications/></HomeApp>)}
         },
         {
             title: "Messages",
-            path: "/home/messages",
-            component: () => {return(<HomeApp selectedPath="/home/messages"><Messages/></HomeApp>)}
+            path: "/messages",
+            component: () => {return(<HomeApp selectedPath="/messages"><Messages/></HomeApp>)}
         },
         {
             title: "Bookmarks",
-            path: "/home/bookmarks",
-            component: () => {return(<HomeApp selectedPath="/home/bookmarks"><Bookmarks/></HomeApp>)}
+            path: "/bookmarks",
+            component: () => {return(<HomeApp selectedPath="/bookmarks"><Bookmarks/></HomeApp>)}
         },
         {
             title: "Lists",
-            path: "/home/lists",
-            component: () => {return(<HomeApp selectedPath="/home/lists"><Lists/></HomeApp>)}
+            path: "/lists",
+            component: () => {return(<HomeApp selectedPath="/lists"><Lists/></HomeApp>)}
         },
         {
             title: "Profile",
-            path: "/home/profile",
-            component: () => {return(<HomeApp selectedPath="/home/profile"><Profile/></HomeApp>)}
+            path: "/profile",
+            component: () => {return(<HomeApp selectedPath="/profile"><Profile/></HomeApp>)}
         },
         {
             title: "Show more",
-            path: "/home/more",
-            component: () => {return(<HomeApp selectedPath="/home/more"><More/></HomeApp>)}
+            path: "/more",
+            component: () => {return(<HomeApp selectedPath="/more"><More/></HomeApp>)}
         }
     ],
     unrestricted: [

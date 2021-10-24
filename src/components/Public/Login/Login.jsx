@@ -45,7 +45,7 @@ function Login() {
                         />
                     </Form>
                 </div>
-                <h4 className="secondary-text">Don't have an account? <a href="../SignUp">Join free today</a></h4>
+                <p className="secondary-text">Don't have an account? <a href="../SignUp">Join free today</a></p>
             </div>
         </div>
         </HelmetProvider>

@@ -30,7 +30,7 @@ function LandingPage() {
             className="white-button"
             text="Login now"
           /></a>
-          <h4 className="secondary-color">Don't have an account? <a href="./SignUp">Join free today</a></h4>
+          <p className="secondary-color"> Don't have an account?<a href="./SignUp">Join free today</a></p>
           <a href="./SignUp"><Button
             className="white-button"
             text="Sign Up"

@@ -10,7 +10,14 @@
     margin-bottom: 10px;
     align-content: center;
     margin-left: 80px;
+    font-weight: bold;
+    
 }
+    .primary-button:hover{
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        background-color: $white-color;
+    }
 
 .white-button {
     @include button(100%, 40px, $white-color, $primary-color);
@@ -19,4 +26,9 @@
     border-radius: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.white-button:hover{
+    border: 1px solid $white-color;
+    color: white;
+    background-color: $primary-color;
 }

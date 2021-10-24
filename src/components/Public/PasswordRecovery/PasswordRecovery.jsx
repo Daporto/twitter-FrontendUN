@@ -35,7 +35,7 @@ function PasswordRecovery() {
                     text="Recover your password"
                 />
             </Form>           
-            <h4 className="secondary-text">Return to <a href="../Login">Login</a></h4>
+            <p className="secondary-text">Return to <a href="../Login">Login</a></p>
             </div>
         </div>
         </HelmetProvider>
