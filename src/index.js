@@ -6,10 +6,12 @@ import './index.scss';
 import App from './App';
 import { AuthProvider } from './context/AuthContext';
 import reportWebVitals from './reportWebVitals';
-
+import ReactNotification from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
 
 ReactDOM.render(
   <React.StrictMode>
+    <ReactNotification />
     <AuthProvider>
     <App />
     </AuthProvider>

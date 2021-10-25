@@ -18,17 +18,20 @@ const App = () => {
           {
 
             Auth?
-            
             restricted.map(({ path, component }, index) =>
             <Route key={"restricted-"+index} exact path={path} component={component} />)
-            
-
+            .concat(
+              unrestricted.map(({ path }, index) =>
+              <Route key={"unrestricted-"+index} exact path={path}>
+                <Redirect to="/" />
+              </Route>
+              )
+            ) 
             :
-            unrestricted.map(({ path, component },index) =>
-            
+            unrestricted.map(({ path, component },index) =>           
             <Route key={"unrestricted-"+index} exact path={path} component={component} />)
             .concat(
-              restricted.map(({ path, component }, index) =>
+              restricted.map(({ path }, index) =>
               <Route key={"restricted-"+index} exact path={path}>
                 <Redirect to="/login" />
               </Route>
