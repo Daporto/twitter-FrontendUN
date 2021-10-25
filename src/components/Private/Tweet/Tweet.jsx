@@ -8,7 +8,7 @@ import { useState } from 'react'
 import { addLikeOrDislike, deleteTweet } from '../../../services/tweetServices'
 const Tweet = (props) => {
     const [tweets, setTweets] = useState([]);
-    const {user, tweetContent, like, tweetId} = props
+    const {user, tweetContent, like, tweetId, Date} = props
     const [likes, setLikes]= useState(false);
     const addLikes = (event) => {
         event.preventDefault();
