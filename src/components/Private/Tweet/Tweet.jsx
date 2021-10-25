@@ -58,8 +58,10 @@ const Tweet = (props) => {
     const deployComment = (isOpen) => {
         if(!isOpen){
             setIsOpen(true);
+            console.log("*elemento1*: ",document.getElementById("commentDiv"))
             document.getElementById("commentDiv").style.display = "";
         }else{
+            console.log("*elemento2*: ",document.getElementById("commentDiv"))
             document.getElementById("commentDiv").style.display = "none";
             setIsOpen(false);
             }
@@ -96,7 +98,7 @@ const Tweet = (props) => {
             </div>
             <h4>{tweetContent}</h4>
             <div className="links">
-                <img src={Comment} alt="Comment" width="30" height="30" onClick={deployComment(isOpen)}/>
+                <img src={Comment} alt="Comment" width="30" height="30" onClick={() => deployComment(isOpen)}/>
                 <img src={Retweet} alt="Retweet" width="30" height="30" />
                 <div  className="likes">
                 <img className="likeImage" src={Like} alt="Like" width="30" height="30" onClick={addLikes} />
