@@ -11,11 +11,18 @@ import LLogo from '../../../Images/Feed/list.svg'
 import PLogo from '../../../Images/Feed/user.svg'
 import MoreLogo from '../../../Images/Feed/more.svg'
 import Button from '../../common/Button/Button'
+import { AuthContext } from '../../../context/AuthContext';
+import { useContext } from 'react';
 
 const NavApp = (props) => {
     //const {selectedPath} = props;
     const { restricted } = routes;
     const icons = [HLogo, ELogo, NLogo, MLogo, BLogo, LLogo, PLogo, MoreLogo]
+   const auth =useContext(AuthContext);
+    const SignOut = (event) =>{
+    event.preventDefault();
+        auth.logOut();
+    }
     return (
         <div className="navigation">
             <nav>
@@ -34,7 +41,7 @@ const NavApp = (props) => {
                         </div>)
 
                 }
-                <Button className="primary-button" text="Tweet" />
+                <Button className="primary-button" text="Sign Out" onClick = {SignOut}/>
             </nav>
         </div>
     );
