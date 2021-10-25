@@ -1,6 +1,9 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-
+import { useContext } from 'react';
+import { useHistory } from 'react-router'
+import { store } from 'react-notifications-component';
 import {useState} from 'react';
+
 import {loginUser } from '../../../services/userServices';
 import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
@@ -8,8 +11,7 @@ import Button from '../../common/Button/Button'
 import FormHeader from '../../common/FormHeader/FormHeader'
 import './styles/Login.scss'
 import { AuthContext } from '../../../context/AuthContext';
-import { useContext } from 'react';
-import { useHistory } from 'react-router'
+import { successNotification } from '../../../lib/ui/notifications'
 
 function Login() {
     const [username, setUsername]= useState("");
@@ -25,6 +27,7 @@ function Login() {
                 const user = data.data;
                 auth.logIn(user);
                 console.log("user", user);
+                successNotification("Ha iniciado sesión satisfactoriamente");
                 history.push("/");
             }
         })
