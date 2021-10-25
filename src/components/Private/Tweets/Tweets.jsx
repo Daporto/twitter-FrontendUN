@@ -4,20 +4,21 @@ import { getTweetsByUser } from '../../../services/tweetServices';
 import { useEffect } from 'react';
 
 const Tweets = () => {
-    const [tweets, setTweets] = useState([]);
+    let [tweets, setTweets] = useState([]);
     useEffect(() => {
         let dataUser = localStorage.getItem("user");
         getTweetsByUser(JSON.parse(dataUser).token).then((data) => {
             let listTweets = data.data;
-            console.log(Object.keys(listTweets).map((key) => [Number(key), listTweets[key]]))
-            setTweets(Object.keys(listTweets).map((key) => [Number(key), listTweets[key]]));
-        });
-    }, [])
+            setTweets(listTweets);
+        }, []);
+    })
     return (
         <div className="Feed-padding">
-            {tweets.map(( { content, user, likes, _id, updateAt }) =>
-            <Tweet user={user} tweetContent={content} likes={likes} tweetId={_id} Date={updateAt}/>) }
-            
+            {
+                tweets.map(({ content, user, likes, _id, createdAt }) =>
+                    <Tweet user={user} tweetContent={content} like={likes} tweetId={_id} Date={createdAt} />
+                )
+            }
         </div>
     )
 };

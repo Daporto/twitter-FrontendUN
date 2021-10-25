@@ -38,7 +38,7 @@ const Tweet = (props) => {
         <div className="Feed-container">
                <div className="User">
                 <img src={PLogo} alt="UserLogo" width="30" height="30"/>
-               <h3>{user}</h3><h4>@{user}</h4>
+               <h3>{user.name}</h3><h4>@{user.username}</h4>
                </div>
                <h4>{tweetContent}</h4>
                <div className="links">
