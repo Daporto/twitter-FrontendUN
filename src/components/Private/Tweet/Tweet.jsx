@@ -1,17 +1,21 @@
 import { useState } from 'react'
-
 import Comment from '../../../Images/Feed/post/comment.svg'
+import Send from '../../../Images/Feed/post/send.svg'
 import Retweet from '../../../Images/Feed/post/refreshing.svg'
 import Like from '../../../Images/Feed/post/heart.svg'
 import Delete from '../../../Images/Feed/post/Delete.svg'
 import PLogo from '../../../Images/Feed/user.svg'
+import Input from '../../common/Input/Input'
 import './styles/tweet.scss'
-import { addLikeOrUnlike, deleteTweet } from '../../../services/tweetServices'
+import { addLikeOrUnlike, createComment, deleteTweet } from '../../../services/tweetServices'
 import { successNotification, errorNotification } from '../../../lib/ui/notifications';
+let isOpen =false;
 const Tweet = (props) => {
     const [tweets, setTweets] = useState([]);
     const { user, tweetContent, likes, tweetId } = props
     const [isLike, setLikes] = useState(false);
+    const [comment, setComment]= useState("");
+    const [comments, setComments]= useState([]);
     const userLS = localStorage.getItem("user");
     const userLSjson = JSON.parse(userLS);
     const addLikes = (event) => {
@@ -49,6 +53,41 @@ const Tweet = (props) => {
                 errorNotification("Algo ha salido mal")
             });
     };
+
+    const deployComment = (event) => {
+        event.preventDefault();
+        if(isOpen){
+            event.preventDefault();
+            createComment().then((data)=>(tweetId, comment, userLSjson.token)
+            .then((data) => {
+                if (data._id) {
+                    let post = data;
+                    setComments([post, ...comments]);
+                    successNotification("Comentario publicado exitosamente")
+                } else {
+                    errorNotification("Ha ocurrido un error publicando el comentario")
+                }
+            })
+            .catch((err) => {
+                errorNotification("Ha ocurrido un error publicando el comentario")
+            }));
+            <div className="commentDiv">
+                    <Input
+                        type="text"
+                        name="comment"
+                        id="comment"
+                        placeholder="What do you thing about it?"
+                        setState={setComment}
+                        state={comment}
+                    />
+                    <img src={Send} alt="Comment" width="30" height="30"/>
+                </div>
+                isOpen=true;
+            }else{
+                <div className="commentDiv"></div>
+        }
+
+    }
     return (
         <div className="Feed-container">
             <div className="User">
@@ -57,7 +96,7 @@ const Tweet = (props) => {
             </div>
             <h4>{tweetContent}</h4>
             <div className="links">
-                <img src={Comment} alt="Comment" width="30" height="30" />
+                <img src={Comment} alt="Comment" width="30" height="30" onClick={deployComment}/>
                 <img src={Retweet} alt="Retweet" width="30" height="30" />
                 <div  className="likes">
                 <img className="likeImage" src={Like} alt="Like" width="30" height="30" onClick={addLikes} />
@@ -70,6 +109,8 @@ const Tweet = (props) => {
                         <></>
                 }
             </div>
+            
+            
         </div>
     )
 };
