@@ -4,12 +4,13 @@ const get = (endpoint) =>{
     return fetch(`${httpApi}${endpoint}`);
 };
 
-const post = async (endpoint, data)=>{
+const post = async (endpoint, data, headers = {})=>{
     const response = await fetch(`${httpApi}${endpoint}`, {
         method: "POST",
         body: JSON.stringify(data),
         headers:{
-            'Content-Type' : 'application/json'
+            'Content-Type' : 'application/json',
+            ...headers
         }
     });
     return response.json();
