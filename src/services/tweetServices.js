@@ -1,4 +1,4 @@
-import { post, deleteRequest } from "./http";
+import { post, deleteRequest, get } from "./http";
 
 const createTweet = async (content, jwtToken) => {
     
@@ -45,4 +45,12 @@ const createComment = async (tweetId, comment, jwtToken) => {
     return response;
 }
 
-export {createTweet, deleteTweet, addLikeOrDislike, createComment}
+const getTweetsByUser = async (jwtToken) => {
+    const headers = {
+        "x-access-token": jwtToken
+     };
+    const response = await get("/tweets", {}, headers);
+    return response
+}
+
+export {createTweet, deleteTweet, addLikeOrDislike, createComment, getTweetsByUser}
