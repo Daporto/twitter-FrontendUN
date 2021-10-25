@@ -1,7 +1,6 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useContext } from 'react';
 import { useHistory } from 'react-router'
-import { store } from 'react-notifications-component';
 import {useState} from 'react';
 
 import {loginUser } from '../../../services/userServices';

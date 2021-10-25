@@ -1,9 +1,14 @@
 import Tweet from '../Tweet/Tweet'
 
 const Tweets = () => {
+    /*const [content, setContent] = useState("");
+    import { useState } from 'react';
+    const user = localStorage.getItem("user");
+    const [tweets, setTweets] = useState([]);*/
+ 
     return (
         <div className="Feed-padding">
-            <Tweet user="daporto" tweetContent="
+            <Tweet user="Daporto" tweetContent="
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 

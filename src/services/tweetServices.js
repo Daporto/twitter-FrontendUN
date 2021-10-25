@@ -1,9 +1,6 @@
 import { post, deleteRequest, get } from "./http";
 
 const createTweet = async (content, jwtToken) => {
-    
-    console.log("content",content);
-    console.log("token",jwtToken);
     const newTweet = { content };
     const headers = {
         "x-access-token": jwtToken

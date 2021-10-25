@@ -10,7 +10,7 @@ const Trending = () => {
             <Trend trendingNumber="2" hashtag="#ThelmaJones" tweets="456K"/>
             <Trend trendingNumber="3" hashtag="#LoisPearson" tweets="456K"/>
             <Trend trendingNumber="4" hashtag="#WilmaBoyd" tweets="456K"/>
-            <Trend trendingNumber="" hashtag="ErikBaker" tweets="456K"/>
+            <Trend trendingNumber="5" hashtag="ErikBaker" tweets="456K"/>
             </div>
         </div>
     )
