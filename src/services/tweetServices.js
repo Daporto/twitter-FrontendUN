@@ -14,6 +14,8 @@ const deleteTweet = async (tweetId, jwtToken) => {
     const headers = {
         "x-access-token": jwtToken
     };
+    console.log("TweetInfo,",tweetInfo)
+    console.log("headers,",headers)
     const response = await deleteRequest("/tweets", tweetInfo, headers);
     return response;
 }
