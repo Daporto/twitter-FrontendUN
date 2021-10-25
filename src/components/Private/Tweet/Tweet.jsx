@@ -9,11 +9,12 @@ import Input from '../../common/Input/Input'
 import './styles/tweet.scss'
 import { addLikeOrUnlike, createComment, deleteTweet } from '../../../services/tweetServices'
 import { successNotification, errorNotification } from '../../../lib/ui/notifications';
-let isOpen =false;
+
 const Tweet = (props) => {
     const [tweets, setTweets] = useState([]);
     const { user, tweetContent, likes, tweetId } = props
     const [isLike, setLikes] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const [comment, setComment]= useState("");
     const [comments, setComments]= useState([]);
     const userLS = localStorage.getItem("user");
@@ -54,13 +55,24 @@ const Tweet = (props) => {
             });
     };
 
-    const deployComment = (event) => {
+    const deployComment = (isOpen) => {
+        if(!isOpen){
+            setIsOpen(true);
+            document.getElementById("commentDiv").style.display = "";
+        }else{
+            document.getElementById("commentDiv").style.display = "none";
+            setIsOpen(false);
+            }
+        return isOpen
+
+    }
+    const addComment=(event)=>{
         event.preventDefault();
-        if(isOpen){
-            event.preventDefault();
-            createComment().then((data)=>(tweetId, comment, userLSjson.token)
+        if(comment!==""){
+            createComment(tweetId, comment, userLSjson.token)
             .then((data) => {
-                if (data._id) {
+                console.log(data)
+                if (data) {
                     let post = data;
                     setComments([post, ...comments]);
                     successNotification("Comentario publicado exitosamente")
@@ -70,23 +82,11 @@ const Tweet = (props) => {
             })
             .catch((err) => {
                 errorNotification("Ha ocurrido un error publicando el comentario")
-            }));
-            <div className="commentDiv">
-                    <Input
-                        type="text"
-                        name="comment"
-                        id="comment"
-                        placeholder="What do you thing about it?"
-                        setState={setComment}
-                        state={comment}
-                    />
-                    <img src={Send} alt="Comment" width="30" height="30"/>
-                </div>
-                isOpen=true;
-            }else{
-                <div className="commentDiv"></div>
+            });
+        }else{
+            errorNotification("Campo vacio, por favor rellenar")
         }
-
+    
     }
     return (
         <div className="Feed-container">
@@ -96,7 +96,7 @@ const Tweet = (props) => {
             </div>
             <h4>{tweetContent}</h4>
             <div className="links">
-                <img src={Comment} alt="Comment" width="30" height="30" onClick={deployComment}/>
+                <img src={Comment} alt="Comment" width="30" height="30" onClick={deployComment(isOpen)}/>
                 <img src={Retweet} alt="Retweet" width="30" height="30" />
                 <div  className="likes">
                 <img className="likeImage" src={Like} alt="Like" width="30" height="30" onClick={addLikes} />
@@ -109,7 +109,17 @@ const Tweet = (props) => {
                         <></>
                 }
             </div>
-            
+            <div className="commentDiv" id="commentDiv">
+                    <Input
+                        type="text"
+                        name="comment"
+                        id="comment"
+                        placeholder="What do you thing about it?"
+                        setState={setComment}
+                        state={comment}
+                    />
+                    <img src={Send} alt="Comment" width="30" height="30" onClick={addComment}/>
+                </div>
             
         </div>
     )
