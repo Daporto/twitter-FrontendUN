@@ -7,13 +7,11 @@ import './styles/tweet.scss'
 import { useState } from 'react'
 import { addLikeOrDislike } from '../../../services/tweetServices'
 const Tweet = (props) => {
-    const {user, tweetContent} = props
-    const {like, setLikes} = useState(false);
-    const username = localStorage.getItem("user");
-    const getLikes = (event) => {
+    const {user, tweetContent, like, tweetId} = props
+    const [likes, setLikes]= useState(false);
+    const addLikes = (event) => {
         event.preventDefault();
-        let tweetId="";
-        addLikeOrDislike(tweetId , like, JSON.parse(username).token)
+        addLikeOrDislike(tweetId , likes, JSON.parse(user).token)
           .then((data) => {
               setLikes(!like);
           })
@@ -31,7 +29,7 @@ const Tweet = (props) => {
                <div className="links">
                     <img src={Comment} alt="Comment" width="30" height="30"/>
                     <img src={Retweet} alt="Retweet" width="30" height="30"/>
-                    <img src={Like} alt="Like" width="30" height="30" onClick={getLikes}/>
+                    <img src={Like} alt="Like" width="30" height="30" onClick={addLikes}/>
                     <img src={Upload} alt="Upload" width="30" height="30"/>
                 </div>
             </div>

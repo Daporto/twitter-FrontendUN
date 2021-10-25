@@ -1,29 +1,23 @@
+import { useState } from 'react';
 import Tweet from '../Tweet/Tweet'
+import { getTweetsByUser } from '../../../services/tweetServices';
+import { useEffect } from 'react';
 
 const Tweets = () => {
-    /*const [content, setContent] = useState("");
-    import { useState } from 'react';
-    const user = localStorage.getItem("user");
-    const [tweets, setTweets] = useState([]);*/
- 
+    let [tweets, setTweets] = useState([]);
+    useEffect(() => {
+        let dataUser = localStorage.getItem("user");
+        getTweetsByUser(JSON.parse(dataUser).token).then((data) => {
+            let listTweets = data.data;
+            console.log(typeof data.data)
+            setTweets([...listTweets]);
+        });
+    }, []);
     return (
         <div className="Feed-padding">
-            <Tweet user="Daporto" tweetContent="
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
-             id est laborum.
-            "/>
-            <Tweet user="magdaniele" tweetContent="
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
-             id est laborum.
-            "/>
+            {tweets.map(( { content, user, likes, _id, updateAt }) =>
+            <Tweet user={user} tweetContent={content} likes={likes} tweetId={_id} Date={updateAt}/>) }
+            
         </div>
     )
 };

@@ -46,7 +46,7 @@ const getTweetsByUser = async (jwtToken) => {
     const headers = {
         "x-access-token": jwtToken
      };
-    const response = await get("/tweets", {}, headers);
+    const response = await get("/tweets", headers);
     return response
 }
 

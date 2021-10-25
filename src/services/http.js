@@ -1,7 +1,14 @@
 const httpApi = process.env.REACT_APP_HTTP_API;
 
-const get = (endpoint) =>{
-    return fetch(`${httpApi}${endpoint}`);
+const get = async(endpoint, headers = {}) =>{
+    const response = await fetch(`${httpApi}${endpoint}`, {
+        method: "GET",
+        headers:{
+            'Content-Type' : 'application/json',
+            ...headers
+        }
+    });
+    return response.json();
 };
 
 const post = async (endpoint, data, headers = {})=>{
