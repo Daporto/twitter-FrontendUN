@@ -12,7 +12,6 @@ function Login() {
     const [username, setUsername]= useState("");
     const [password, setPassword]= useState("");
     const handleLogin = (event) =>{
-        console.log("login");
         event.preventDefault();
         login(username,password)
         .then((user)=>{

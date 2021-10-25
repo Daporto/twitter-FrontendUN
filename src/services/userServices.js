@@ -6,4 +6,11 @@ const login = async (username, password) => {
   const json = response; 
   return json;
 };
-export {login};
+
+const signUp = async (name, username, email, password, passwordConfirmation) => {
+    const newUser = { name, username, email, password, passwordConfirmation };
+    const response = await post("/users", newUser);
+    const json = response; 
+    return json;
+  };
+export {login, signUp};
