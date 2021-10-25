@@ -28,4 +28,4 @@ const deleteRequest = async (endpoint, data, headers = {})=>{
     return response.json();
 };
 
-export { get, post};
+export { get, post, deleteRequest};

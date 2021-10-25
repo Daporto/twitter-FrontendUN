@@ -9,5 +9,13 @@ const createTweet = async (content, jwtToken) => {
     return response;
 }
 
+const deleteTweet = async (tweetId, jwtToken) => {
+    const tweetInfo = { tweetId };
+    const headers = {
+        "x-access-token": jwtToken
+    };
+    const response = await post("/tweets", tweetInfo, headers);
+    return response;
+}
 
-export {createTweet}
+export {createTweet, deleteTweet}
