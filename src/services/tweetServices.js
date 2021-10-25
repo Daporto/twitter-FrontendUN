@@ -20,7 +20,7 @@ const deleteTweet = async (tweetId, jwtToken) => {
     return response;
 }
 
-const addLikeOrDislike = async (tweetId, isLike, jwtToken) => {
+const addLikeOrUnlike = async (tweetId, isLike, jwtToken) => {
     const tweetInfo = { 
         tweetId,
         like: isLike ? 1 : 0 
@@ -52,4 +52,4 @@ const getTweetsByUser = async (jwtToken) => {
     return response
 }
 
-export {createTweet, deleteTweet, addLikeOrDislike, createComment, getTweetsByUser}
+export {createTweet, deleteTweet, addLikeOrUnlike, createComment, getTweetsByUser}

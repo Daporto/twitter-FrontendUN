@@ -6,7 +6,7 @@ import Like from '../../../Images/Feed/post/heart.svg'
 import Delete from '../../../Images/Feed/post/Delete.svg'
 import PLogo from '../../../Images/Feed/user.svg'
 import './styles/tweet.scss'
-import { addLikeOrDislike, deleteTweet } from '../../../services/tweetServices'
+import { addLikeOrUnlike, deleteTweet } from '../../../services/tweetServices'
 import { successNotification, errorNotification } from '../../../lib/ui/notifications';
 const Tweet = (props) => {
     const [tweets, setTweets] = useState([]);
@@ -16,7 +16,7 @@ const Tweet = (props) => {
     const userLSjson = JSON.parse(userLS);
     const addLikes = (event) => {
         event.preventDefault();
-        addLikeOrDislike(tweetId, likes, JSON.parse(user).token)
+        addLikeOrUnlike(tweetId, likes, JSON.parse(user).token)
             .then((data) => {
                 setLikes(!like);
             })
