@@ -53,6 +53,6 @@ We executed the lighthouse test in incognite mode due to some factor such as chr
 
 ## Second assignment
 The following points were not implemented in this version:
-1. Eliminar comentario (solo si está autenticado) (solo lo puede hacer el creador del comentario) - *this route is not implemented in Back* 
-2. Lista de trending 1 (deben cargar los últimos 10 tweets de una cuenta, consumiendo el endpoint que se alimenta de Twitter original, como lo hicimos en la clase) - *Especial credentials to connect with the real Twitter Api are needed in .env*
-3. Lista de trending 2 (Lista de últimos 20 tweets) - *this route is not implemented in Back* 
+1. Eliminar comentario (solo si está autenticado) (solo lo puede hacer el creador del comentario) - ***this route is not implemented in Back*** 
+2. Lista de trending 1 (deben cargar los últimos 10 tweets de una cuenta, consumiendo el endpoint que se alimenta de Twitter original, como lo hicimos en la clase) - ***Especial credentials to connect with the real Twitter Api are needed in .env***
+3. Lista de trending 2 (Lista de últimos 20 tweets) - ***this route is not implemented in Back***
