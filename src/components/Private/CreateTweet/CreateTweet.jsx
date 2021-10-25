@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import galery from  '../../../Images/Feed/tweets/insert-image.svg'
 import gif from  '../../../Images/Feed/tweets/insert-gif.svg'
 import stats from  '../../../Images/Feed/tweets/insert-stats.svg'
@@ -6,10 +7,29 @@ import wordsc from  '../../../Images/Feed/tweets/right-words.svg'
 import line from  '../../../Images/Feed/tweets/right-line.svg'
 import plus from  '../../../Images/Feed/tweets/right-plus.svg'
 import Button from '../../common/Button/Button'
+import Input from '../../common/Input/Input'
 import './styles/createTweet.scss'
+import {createTweet} from '../../../services/tweetServices'
 
 const CreateTweet = () => {
-
+    const [content, setContent] = useState("");
+    const [tweets, setTweets] = useState([]);
+    const user = localStorage.getItem("user");
+    const tweetCreation = (event) => {
+        event.preventDefault();
+        createTweet(content, JSON.parse(user).token)
+          .then((data) => {
+            let tweet = data.payload;
+            tweet.user = JSON.parse(user);
+            if (data.ok) {
+                console.log("Tweet Creado");
+              setTweets([tweet, ...tweets]);
+            }
+          })
+          .catch((err) => {
+           
+          });
+      }
     return (
         <div className="Feed-insert">
                
@@ -17,11 +37,14 @@ const CreateTweet = () => {
                <div className="Zone-tweet">
                    <div className="profilepic-tweet"></div>
                     <div className="Insert-post">
-                    <input className="form-element"
+                    <Input className="form-element"
                     type="text"
                     id="InsertTw"
                     name="InsertTw"
-                    placeholder="What’s happening"/>
+                    placeholder="What’s happening"
+                    setState={setContent}
+                    state={content}
+                    />
                         <div className="icons-tweet">
                            <div className="left">
                                 <img  src={galery} alt="galery" width="30" height="30"/>
@@ -33,7 +56,7 @@ const CreateTweet = () => {
                                 <img  src={wordsc} alt="wordsc" width="30" height="30"/>
                                 <img  src={line} alt="line" width="30" height="30"/>
                                 <img  src={plus} alt="plus" width="30" height="30"/>
-                                <Button className="primary-button" text="Tweet"/>
+                                <Button className="primary-button" text="Tweet" onClick={tweetCreation}/>
                             </div>
                         </div>
                     </div>
