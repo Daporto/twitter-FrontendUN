@@ -25,6 +25,8 @@ const CreateTweet = () => {
                     tweet.user = JSON.parse(user);
                     setTweets([tweet, ...tweets]);
                     successNotification("Tweet publicado exitosamente")
+                    document.getElementById("InsertTw").value = "";
+                    document.getElementById("InsertTw").placeholder = "What’s happening";
                 } else {
                     errorNotification("Ha ocurrido un error publicando el tweet")
                 }
