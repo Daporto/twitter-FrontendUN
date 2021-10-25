@@ -20,7 +20,7 @@ const AuthProvider = (props) =>{
         return user;
     }
     const isLogIn = () => {
-        return user? !!Object.keys(user).lenght:false;
+        return user? !!Object.keys(user).length:false;
     }
     return (<AuthContext.Provider value ={{ logIn, logOut, isLogIn, getUser}}>
         {props.children}
