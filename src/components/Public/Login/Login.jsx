@@ -11,7 +11,7 @@ import Button from '../../common/Button/Button'
 import FormHeader from '../../common/FormHeader/FormHeader'
 import './styles/Login.scss'
 import { AuthContext } from '../../../context/AuthContext';
-import { successNotification } from '../../../lib/ui/notifications'
+import { successNotification, errorNotification } from '../../../lib/ui/notifications'
 
 function Login() {
     const [username, setUsername]= useState("");
@@ -29,10 +29,13 @@ function Login() {
                 console.log("user", user);
                 successNotification("Ha iniciado sesión satisfactoriamente");
                 history.push("/");
+            }else{
+                errorNotification("Usuario o contraseña inválidos")
             }
         })
         .catch((err)=>{
             console.log("err",err);
+            errorNotification("Error inesperado en el servidor")
         });
     };
     return ( <>

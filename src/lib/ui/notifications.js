@@ -16,4 +16,36 @@ const successNotification = (message) => {
       });
 }
 
-export { successNotification }
+const errorNotification = (message) => {
+  store.addNotification({
+    title: "Error",
+    message,
+    type: "danger",
+    insert: "top",
+    container: "top-right",
+    animationIn: ["animate__animated", "animate__fadeIn"],
+    animationOut: ["animate__animated", "animate__fadeOut"],
+    dismiss: {
+      duration: 5000,
+      onScreen: true
+    }
+  });
+}
+
+const warningNotification = (message) => {
+  store.addNotification({
+    title: "Warning",
+    message,
+    type: "warning",
+    insert: "top",
+    container: "top-right",
+    animationIn: ["animate__animated", "animate__fadeIn"],
+    animationOut: ["animate__animated", "animate__fadeOut"],
+    dismiss: {
+      duration: 5000,
+      onScreen: true
+    }
+  });
+}
+
+export { successNotification, errorNotification, warningNotification}
