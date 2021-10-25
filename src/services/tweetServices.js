@@ -14,16 +14,16 @@ const deleteTweet = async (tweetId, jwtToken) => {
     const headers = {
         "x-access-token": jwtToken
     };
-    console.log("TweetInfo,",tweetInfo)
-    console.log("headers,",headers)
+    console.log("TweetInfo,", tweetInfo)
+    console.log("headers,", headers)
     const response = await deleteRequest("/tweets", tweetInfo, headers);
     return response;
 }
 
 const addLikeOrUnlike = async (tweetId, isLike, jwtToken) => {
-    const tweetInfo = { 
+    const tweetInfo = {
         tweetId,
-        like: isLike ? 1 : 0 
+        like: isLike ? 1 : 0
     };
     const headers = {
         "x-access-token": jwtToken
@@ -39,7 +39,7 @@ const createComment = async (tweetId, comment, jwtToken) => {
     };
     const headers = {
         "x-access-token": jwtToken
-     };
+    };
     const response = await post("/tweets/comments", commentInfo, headers);
     return response;
 }
@@ -47,9 +47,15 @@ const createComment = async (tweetId, comment, jwtToken) => {
 const getTweetsByUser = async (jwtToken) => {
     const headers = {
         "x-access-token": jwtToken
-     };
+    };
     const response = await get("/tweets", headers);
     return response
 }
 
-export {createTweet, deleteTweet, addLikeOrUnlike, createComment, getTweetsByUser}
+export {
+    createTweet,
+    deleteTweet,
+    addLikeOrUnlike,
+    createComment,
+    getTweetsByUser
+}
