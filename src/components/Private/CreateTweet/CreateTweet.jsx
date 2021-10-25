@@ -9,6 +9,7 @@ import Button from '../../common/Button/Button'
 import './styles/createTweet.scss'
 
 const CreateTweet = () => {
+
     return (
         <div className="Feed-insert">
                
