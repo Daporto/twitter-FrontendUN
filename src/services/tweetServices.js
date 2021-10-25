@@ -9,4 +9,5 @@ const createTweet = async (content, jwtToken) => {
     return response;
 }
 
+
 export {createTweet}

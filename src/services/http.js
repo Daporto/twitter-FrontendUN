@@ -16,4 +16,16 @@ const post = async (endpoint, data, headers = {})=>{
     return response.json();
 };
 
+const deleteRequest = async (endpoint, data, headers = {})=>{
+    const response = await fetch(`${httpApi}${endpoint}`, {
+        method: "DELETE",
+        body: JSON.stringify(data),
+        headers:{
+            'Content-Type' : 'application/json',
+            ...headers
+        }
+    });
+    return response.json();
+};
+
 export { get, post};
