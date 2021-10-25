@@ -30,4 +30,16 @@ const addLikeOrDislike = async (tweetId, isLike, jwtToken) => {
     return response;
 }
 
-export {createTweet, deleteTweet, addLikeOrDislike}
+const createComment = async (tweetId, comment, jwtToken) => {
+    const commentInfo = {
+        tweetId,
+        comment
+    };
+    const headers = {
+        "x-access-token": jwtToken
+     };
+    const response = await post("/tweets/comments", commentInfo, headers);
+    return response;
+}
+
+export {createTweet, deleteTweet, addLikeOrDislike, createComment}
