@@ -10,6 +10,7 @@ import Button from '../../common/Button/Button'
 import Input from '../../common/Input/Input'
 import './styles/createTweet.scss'
 import {createTweet} from '../../../services/tweetServices'
+import { successNotification, errorNotification} from '../../../lib/ui/notifications';
 
 const CreateTweet = () => {
     const [content, setContent] = useState("");
@@ -24,10 +25,13 @@ const CreateTweet = () => {
             if (data.ok) {
                 console.log("Tweet Creado");
               setTweets([tweet, ...tweets]);
+              successNotification("Tweet publicado exitosamente")
+            }else{
+                errorNotification("Ha ocurrido un error publicando el tweet")
             }
           })
           .catch((err) => {
-           
+            errorNotification("Ha ocurrido un error publicando el tweet")
           });
       }
     return (
