@@ -16,7 +16,7 @@ const Tweets = () => {
         <div className="Feed-padding">
             {
                 tweets.map(({ content, user, likes, _id, createdAt }) =>
-                    <Tweet key={_id} user={user} tweetContent={content} like={likes} tweetId={_id} Date={createdAt} />
+                    <Tweet key={_id} user={user} tweetContent={content} likes={likes} tweetId={_id} Date={createdAt} />
                 )
             }
         </div>

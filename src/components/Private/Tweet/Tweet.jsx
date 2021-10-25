@@ -10,22 +10,30 @@ import { addLikeOrUnlike, deleteTweet } from '../../../services/tweetServices'
 import { successNotification, errorNotification } from '../../../lib/ui/notifications';
 const Tweet = (props) => {
     const [tweets, setTweets] = useState([]);
-    const { user, tweetContent, like, tweetId } = props
-    const [likes, setLikes] = useState(false);
+    const { user, tweetContent, likes, tweetId } = props
+    const [isLike, setLikes] = useState(false);
     const userLS = localStorage.getItem("user");
     const userLSjson = JSON.parse(userLS);
     const addLikes = (event) => {
+
         event.preventDefault();
-        addLikeOrUnlike(tweetId, likes, JSON.parse(user).token)
+        addLikeOrUnlike(tweetId, !isLike, userLSjson.token)
             .then((data) => {
-                setLikes(!like);
+                if (data.message === "ok") {
+                    !isLike ?
+                        successNotification("like was added") :
+                        successNotification("like was removed")
+                    setLikes(!isLike);
+                } else {
+                    errorNotification("Algo ha salido mal");
+                }
             })
             .catch((err) => {
-
+                errorNotification("Algo ha salido mal");
             });
     }
     const deleteTweets = (value) => {
-        console.log("User",user)
+        console.log("User", user)
         deleteTweet(tweetId, userLSjson.token)
             .then((data) => {
                 console.log("la data:", data)
@@ -51,12 +59,15 @@ const Tweet = (props) => {
             <div className="links">
                 <img src={Comment} alt="Comment" width="30" height="30" />
                 <img src={Retweet} alt="Retweet" width="30" height="30" />
-                <img src={Like} alt="Like" width="30" height="30" onClick={addLikes} />
+                <div  className="likes">
+                <img className="likeImage" src={Like} alt="Like" width="30" height="30" onClick={addLikes} />
+                <h2>{likes}</h2>
+                </div>
                 {
-                userLSjson.username===user.username?
-                <img src={Delete} alt="Delete" width="30" height="30" onClick={deleteTweets} />
-                :
-                <></>
+                    userLSjson.username === user.username ?
+                        <img src={Delete} alt="Delete" width="30" height="30" onClick={deleteTweets} />
+                        :
+                        <></>
                 }
             </div>
         </div>
