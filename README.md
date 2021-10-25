@@ -33,14 +33,13 @@ Open [https://twitter-frontendun.web.app/](https://twitter-frontendun.web.app/) 
 - /login
 - /login/passwordRecovery
 - /signup
-- /home
-- /home/explore
-- /home/notifications
-- /home/messages
-- /home/bookmarks
-- /home/lists
-- /home/profile
-- /home/more
+- /explore
+- /notifications
+- /messages
+- /bookmarks
+- /lists
+- /profile
+- /more
 
 ## Lighthouse test results
 We executed the lighthouse test in incognite mode due to some factor such as chrome extensions and stored data could affect the performance.\
@@ -51,3 +50,9 @@ We executed the lighthouse test in incognite mode due to some factor such as chr
 
 ### Results in mobile device
 ![alt text](https://firebasestorage.googleapis.com/v0/b/images-hosting-84deb.appspot.com/o/mobile-lighthouse.png?alt=media&token=f6c50f63-e327-4178-9422-28a56b585822)
+
+## Second assignment
+The following points were not implemented in this version:
+1. Eliminar comentario (solo si está autenticado) (solo lo puede hacer el creador del comentario) - ***this route is not implemented in Back*** 
+2. Lista de trending 1 (deben cargar los últimos 10 tweets de una cuenta, consumiendo el endpoint que se alimenta de Twitter original, como lo hicimos en la clase) - ***Especial credentials to connect with the real Twitter Api are needed in .env***
+3. Lista de trending 2 (Lista de últimos 20 tweets) - ***this route is not implemented in Back***

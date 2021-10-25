@@ -1,0 +1,17 @@
+.central-container{
+    width: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #E7ECF0;
+    border-right: 1px solid #E7ECF0;
+    padding-left: 40px;
+    padding-top: 60px;
+}
+
+.title{
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-left: 0px;    
+}
