@@ -1,4 +1,4 @@
-import { post } from "./http";
+import { post, deleteRequest } from "./http";
 
 const createTweet = async (content, jwtToken) => {
     const newTweet = { content };
@@ -14,8 +14,20 @@ const deleteTweet = async (tweetId, jwtToken) => {
     const headers = {
         "x-access-token": jwtToken
     };
+    const response = await deleteRequest("/tweets", tweetInfo, headers);
+    return response;
+}
+
+const addLikeOrDislike = async (tweetId, isLike, jwtToken) => {
+    const tweetInfo = { 
+        tweetId,
+        like: isLike ? 1 : 0 
+    };
+    const headers = {
+        "x-access-token": jwtToken
+    };
     const response = await post("/tweets", tweetInfo, headers);
     return response;
 }
 
-export {createTweet, deleteTweet}
+export {createTweet, deleteTweet, addLikeOrDislike}
