@@ -70,4 +70,4 @@ const CreateTweet = () => {
     )
 };
 
-export default CreateTweet
+export default CreateTweet;
