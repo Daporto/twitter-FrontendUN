@@ -26,7 +26,7 @@ const addLikeOrDislike = async (tweetId, isLike, jwtToken) => {
     const headers = {
         "x-access-token": jwtToken
     };
-    const response = await post("/tweets", tweetInfo, headers);
+    const response = await post("/tweets/likes", tweetInfo, headers);
     return response;
 }
 
