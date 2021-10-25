@@ -1,12 +1,11 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import {useState} from 'react';
-import { signUp } from '../../../services/userServices';
+import { signUpUser } from '../../../services/userServices';
 import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
 import Button from '../../common/Button/Button'
 import FormHeader from '../../common/FormHeader/FormHeader'
 import './Styles/SignUp.scss'
-import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 function SignUp() {
     const [username, setUsername]= useState("");
@@ -17,7 +16,7 @@ function SignUp() {
     
     const handleSignUp = (event) =>{
         event.preventDefault();
-        signUp(name, username, email, password, passwordConfirmation)
+        signUpUser(name, username, email, password, passwordConfirmation)
         .then((user)=>{
             alert("El usuario "+ username +" fue creado exitosamente");
             console.log("user", user);

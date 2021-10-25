@@ -1,21 +1,32 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import {useState} from 'react';
-import { login } from '../../../services/userServices';
+import {loginUser } from '../../../services/userServices';
 import Form from '../../common/Form/Form'
 import Input from '../../common/Input/Input'
 import Button from '../../common/Button/Button'
 import FormHeader from '../../common/FormHeader/FormHeader'
 import './styles/Login.scss'
+import { AuthContext } from '../../../context/AuthContext';
+import { useContext } from 'react';
+import { useHistory } from 'react-router'
 
 function Login() {
     const [username, setUsername]= useState("");
     const [password, setPassword]= useState("");
+    const auth =useContext(AuthContext);
+    const history = useHistory();
     const handleLogin = (event) =>{
         event.preventDefault();
-        login(username,password)
-        .then((user)=>{
-            console.log("user", user);
+        loginUser(username,password)
+        .then((data)=>{
+            console.log(data);
+            if(data.message === "ok"){
+                const user = data.data;
+                auth.logIn(user);
+                console.log("user", user);
+                history.push("/");
+            }
         })
         .catch((err)=>{
             console.log("err",err);

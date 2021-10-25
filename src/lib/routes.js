@@ -17,7 +17,7 @@ const routes = {
     restricted: [
         {
             title: "Home",
-            path: "/home",
+            path: "/",
             component: () => {return(<HomeApp selectedPath="/home"><Timeline/></HomeApp>)}
         },
         {

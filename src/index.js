@@ -4,12 +4,15 @@ import firebaseApp from './services/firebase'
 import { getAnalytics } from "firebase/analytics";
 import './index.scss';
 import App from './App';
+import { AuthProvider } from './context/AuthContext';
 import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
   <React.StrictMode>
+    <AuthProvider>
     <App />
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
