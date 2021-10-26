@@ -58,11 +58,8 @@ const Tweet = (props) => {
     const deployComment = (divId) => {
         if(!isOpen){
             setIsOpen(true);
-            //console.log("*elemento1*: ",document.getElementById("commentDiv"))
-            document.getElementById(divId).style.display = "";
+            document.getElementById(divId).style.display = "flex";
         }else{
-            //console.log("*elemento2*: ",document.getElementById("commentDiv"))
-            //console.log("el this: ",event)
             document.getElementById(divId).style.display = "none";
             setIsOpen(false);
             }
@@ -79,6 +76,8 @@ const Tweet = (props) => {
                     let post = data;
                     setComments([post, ...comments]);
                     successNotification("Comentario publicado exitosamente")
+                    document.getElementById("commentInput").value = "";
+                    document.getElementById("commentInput").placeholder = "What do you thing about it?";
                 } else {
                     errorNotification("Ha ocurrido un error publicando el comentario")
                 }
@@ -103,7 +102,7 @@ const Tweet = (props) => {
                 <img src={Retweet} alt="Retweet" width="30" height="30" />
                 <div  className="likes">
                 <img className="likeImage" src={Like} alt="Like" width="30" height="30" onClick={addLikes} />
-                <h2>{likes}</h2>
+                <h4>{likes}</h4>
                 </div>
                 {
                     userLSjson.username === user.username ?
@@ -116,8 +115,8 @@ const Tweet = (props) => {
                     <Input
                         type="text"
                         name="comment"
-                        id="comment"
-                        placeholder="What do you thing about it?"
+                        id="commentInput"
+                        placeholder="What do you think about it?"
                         setState={setComment}
                         state={comment}
                     />
