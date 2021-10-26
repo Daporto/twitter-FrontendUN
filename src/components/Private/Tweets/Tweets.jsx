@@ -7,7 +7,8 @@ const Tweets = () => {
     let [tweets, setTweets] = useState([]);
     useEffect(() => {
         let dataUser = localStorage.getItem("user");
-        getTweets(JSON.parse(dataUser).token).then((data) => {
+        let token = JSON.parse(dataUser).token;
+        getTweets(token, 1, 20).then((data) => {
             let listTweets = data.data;
             setTweets(listTweets);
         });

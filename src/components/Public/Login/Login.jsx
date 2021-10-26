@@ -1,6 +1,6 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useContext } from 'react';
-import { Redirect, useHistory } from 'react-router'
+import { useHistory } from 'react-router'
 import {useState} from 'react';
 
 import {loginUser } from '../../../services/userServices';

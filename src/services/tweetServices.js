@@ -44,11 +44,11 @@ const createComment = async (tweetId, comment, jwtToken) => {
     return response;
 }
 
-const getTweets = async (jwtToken) => {
+const getTweets = async (jwtToken, limit, page) => {
     const headers = {
         "x-access-token": jwtToken
     };
-    const response = await get("/tweets", headers);
+    const response = await get(`/tweets?page=${page}&limit=${limit}`, headers);
     return response
 }
 
