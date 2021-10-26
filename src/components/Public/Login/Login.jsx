@@ -1,6 +1,6 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useContext } from 'react';
-import { useHistory } from 'react-router'
+import { Redirect, useHistory } from 'react-router'
 import {useState} from 'react';
 
 import {loginUser } from '../../../services/userServices';
@@ -27,7 +27,7 @@ function Login() {
                 auth.logIn(user);
                 console.log("user", user);
                 successNotification("Ha iniciado sesión satisfactoriamente");
-                history.push("/");
+                history.go(0)
             }else{
                 errorNotification("Usuario o contraseña inválidos")
             }
