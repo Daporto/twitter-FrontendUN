@@ -10,8 +10,8 @@ const Tweets = () => {
         getTweets(JSON.parse(dataUser).token).then((data) => {
             let listTweets = data.data;
             setTweets(listTweets);
-        }, [tweets]);
-    })
+        });
+    },[])
     return (
         <div className="Feed-padding">
             {
