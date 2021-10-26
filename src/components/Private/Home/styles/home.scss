@@ -26,11 +26,20 @@
     height: 50%;
     border-bottom: 1px solid $trends-div-color;
     padding-bottom: 20px;
+        div.commentDiv{
+        display: none;
+        margin-top: 10px;
+        Input{
+            margin-right: 10vh;
+            margin-left: 1vh;
+        }
+    }
 }
 .Feed-container div{
     flex-direction: row;
     align-items: center;
     display: flex;
+
 }
 .Feed-container h4{
     font-weight: normal;

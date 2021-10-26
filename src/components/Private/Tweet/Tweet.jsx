@@ -55,14 +55,14 @@ const Tweet = (props) => {
             });
     };
 
-    const deployComment = (isOpen) => {
+    const deployComment = (divId) => {
         if(!isOpen){
             setIsOpen(true);
             console.log("*elemento1*: ",document.getElementById("commentDiv"))
-            document.getElementById("commentDiv").style.display = "";
+            document.getElementById(divId).style.display = "flex";
         }else{
             console.log("*elemento2*: ",document.getElementById("commentDiv"))
-            document.getElementById("commentDiv").style.display = "none";
+            document.getElementById(divId).style.display = "none";
             setIsOpen(false);
             }
         return isOpen
@@ -78,6 +78,8 @@ const Tweet = (props) => {
                     let post = data;
                     setComments([post, ...comments]);
                     successNotification("Comentario publicado exitosamente")
+                    document.getElementById("commentInput").value = "";
+                    document.getElementById("commentInput").placeholder = "What do you thing about it?";
                 } else {
                     errorNotification("Ha ocurrido un error publicando el comentario")
                 }
@@ -98,11 +100,14 @@ const Tweet = (props) => {
             </div>
             <h4>{tweetContent}</h4>
             <div className="links">
-                <img src={Comment} alt="Comment" width="30" height="30" onClick={() => deployComment(isOpen)}/>
+                <div  className="commentStyle">
+                <img src={Comment} alt="Comment" width="30" height="30" onClick={()=>deployComment(tweetId)}/>
+                <h4>{comments.length}</h4>
+                </div>
                 <img src={Retweet} alt="Retweet" width="30" height="30" />
                 <div  className="likes">
                 <img className="likeImage" src={Like} alt="Like" width="30" height="30" onClick={addLikes} />
-                <h2>{likes}</h2>
+                <h4>{likes}</h4>
                 </div>
                 {
                     userLSjson.username === user.username ?
@@ -111,12 +116,12 @@ const Tweet = (props) => {
                         <></>
                 }
             </div>
-            <div className="commentDiv" id="commentDiv">
+            <div className="commentDiv" id={tweetId}>
                     <Input
                         type="text"
                         name="comment"
-                        id="comment"
-                        placeholder="What do you thing about it?"
+                        id="commentInput"
+                        placeholder="What do you think about it?"
                         setState={setComment}
                         state={comment}
                     />
