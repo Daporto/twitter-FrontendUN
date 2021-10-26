@@ -58,8 +58,10 @@ const Tweet = (props) => {
     const deployComment = (divId) => {
         if(!isOpen){
             setIsOpen(true);
+            console.log("*elemento1*: ",document.getElementById("commentDiv"))
             document.getElementById(divId).style.display = "flex";
         }else{
+            console.log("*elemento2*: ",document.getElementById("commentDiv"))
             document.getElementById(divId).style.display = "none";
             setIsOpen(false);
             }
@@ -76,8 +78,9 @@ const Tweet = (props) => {
                     let post = data;
                     setComments([post, ...comments]);
                     successNotification("Comentario publicado exitosamente")
-                    document.getElementById("commentInput").value = "";
-                    document.getElementById("commentInput").placeholder = "What do you thing about it?";
+                    document.getElementById("commentInput"+tweetId).value = "";
+                    document.getElementById("commentInput"+tweetId).placeholder = "What do you thing about it?";
+                    deployComment(tweetId);
                 } else {
                     errorNotification("Ha ocurrido un error publicando el comentario")
                 }
@@ -95,27 +98,31 @@ const Tweet = (props) => {
             <div className="User">
                 <img src={PLogo} alt="UserLogo" width="30" height="30" />
                 <h3>{user.name}</h3><h4>@{user.username}</h4>
+                {
+                    userLSjson.username === user.username ?
+                        <div className="deleteIcon">
+                        <img className="delete" src={Delete} alt="Delete" width="30" height="30" onClick={deleteTweets} />
+                        </div>:
+                        <></>
+                }
             </div>
             <h4>{tweetContent}</h4>
             <div className="links">
-                <img src={Comment} alt="Comment" width="30" height="30" onClick={()=>deployComment(`commentDiv-`+tweetId)}/>
+                <div  className="commentStyle">
+                <img className="comment" src={Comment} alt="Comment" width="30" height="30" onClick={()=>deployComment(tweetId)}/>
+                <h4>{comments.length}</h4>
+                </div>
                 <img src={Retweet} alt="Retweet" width="30" height="30" />
                 <div  className="likes">
                 <img className="likeImage" src={Like} alt="Like" width="30" height="30" onClick={addLikes} />
                 <h4>{likes}</h4>
                 </div>
-                {
-                    userLSjson.username === user.username ?
-                        <img src={Delete} alt="Delete" width="30" height="30" onClick={deleteTweets} />
-                        :
-                        <></>
-                }
             </div>
-            <div className="commentDiv" id={`commentDiv-`+tweetId}>
+            <div className="commentDiv" id={tweetId}>
                     <Input
                         type="text"
                         name="comment"
-                        id="commentInput"
+                        id={"commentInput"+tweetId}
                         placeholder="What do you think about it?"
                         setState={setComment}
                         state={comment}

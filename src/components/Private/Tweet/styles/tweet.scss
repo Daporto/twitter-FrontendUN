@@ -2,6 +2,7 @@
 .likeImage {
     padding-right: 15px;
     padding-left: 15px;
+
 }
 .likes{
     h4{
@@ -14,4 +15,19 @@
         margin-left: 15px;
         margin-bottom: 0;
     }
+}
+.deleteIcon{
+    width:  45%;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.likeImage:hover{
+    cursor: pointer;
+}
+.delete:hover{
+        cursor: pointer;  
+}  
+.comment:hover{
+        cursor: pointer;  
 }
