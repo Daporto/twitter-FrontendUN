@@ -55,14 +55,15 @@ const Tweet = (props) => {
             });
     };
 
-    const deployComment = (isOpen) => {
+    const deployComment = (divId) => {
         if(!isOpen){
             setIsOpen(true);
-            console.log("*elemento1*: ",document.getElementById("commentDiv"))
-            document.getElementById("commentDiv").style.display = "";
+            //console.log("*elemento1*: ",document.getElementById("commentDiv"))
+            document.getElementById(divId).style.display = "";
         }else{
-            console.log("*elemento2*: ",document.getElementById("commentDiv"))
-            document.getElementById("commentDiv").style.display = "none";
+            //console.log("*elemento2*: ",document.getElementById("commentDiv"))
+            //console.log("el this: ",event)
+            document.getElementById(divId).style.display = "none";
             setIsOpen(false);
             }
         return isOpen
@@ -98,7 +99,7 @@ const Tweet = (props) => {
             </div>
             <h4>{tweetContent}</h4>
             <div className="links">
-                <img src={Comment} alt="Comment" width="30" height="30" onClick={() => deployComment(isOpen)}/>
+                <img src={Comment} alt="Comment" width="30" height="30" onClick={()=>deployComment(`commentDiv-`+tweetId)}/>
                 <img src={Retweet} alt="Retweet" width="30" height="30" />
                 <div  className="likes">
                 <img className="likeImage" src={Like} alt="Like" width="30" height="30" onClick={addLikes} />
@@ -111,7 +112,7 @@ const Tweet = (props) => {
                         <></>
                 }
             </div>
-            <div className="commentDiv" id="commentDiv">
+            <div className="commentDiv" id={`commentDiv-`+tweetId}>
                     <Input
                         type="text"
                         name="comment"
