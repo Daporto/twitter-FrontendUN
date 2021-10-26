@@ -44,7 +44,7 @@ const createComment = async (tweetId, comment, jwtToken) => {
     return response;
 }
 
-const getTweetsByUser = async (jwtToken) => {
+const getTweets = async (jwtToken) => {
     const headers = {
         "x-access-token": jwtToken
     };
@@ -57,5 +57,5 @@ export {
     deleteTweet,
     addLikeOrUnlike,
     createComment,
-    getTweetsByUser
+    getTweets
 }
