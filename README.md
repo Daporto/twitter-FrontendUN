@@ -53,7 +53,7 @@ We executed the lighthouse test in incognite mode due to some factor such as chr
 
 ## Second assignment
 The API used in this App was deployed in Heroku and can be accessed through this endpoint:\
-[https://twitter-frontendun.web.app/](https://twitter-frontendun.web.app/)
+[https://twitter-api-un.herokuapp.com/api](https://twitter-api-un.herokuapp.com/api)
 
 The following points were not implemented in this version:
 1. Eliminar comentario (solo si está autenticado) (solo lo puede hacer el creador del comentario) - ***this route is not implemented in Back*** 
