@@ -17,6 +17,7 @@
         border: 1px solid $primary-color;
         color: $primary-color;
         background-color: $white-color;
+        cursor: pointer;
     }
 
 .white-button {
@@ -31,4 +32,5 @@
     border: 1px solid $white-color;
     color: white;
     background-color: $primary-color;
+    cursor: pointer;
 }
